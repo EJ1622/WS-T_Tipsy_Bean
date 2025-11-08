@@ -248,3 +248,121 @@ body {
   display: flex;
   position: relative;
 }
+
+.bestsellers {
+  background: #222328;
+  color: #fff;
+  padding: 60px 0 80px 0;
+  text-align: center;
+}
+
+.bestsellers h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.bestsellers-subheading {
+  font-size: 1rem;
+  color: #c4c4c4;
+  margin-bottom: 42px;
+}
+
+.bestseller-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.bestseller-item {
+  display: flex;
+  align-items: flex-start;
+  background: #23242a;
+  border-radius: 14px;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 730px;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,0.13);
+  gap: 30px;
+}
+
+.bestseller-item img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #404150;
+}
+
+.bestseller-info {
+  flex: 1 1 0;
+  text-align: left;
+}
+
+.bestseller-title-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.09rem;
+  margin-bottom: 7px;
+}
+
+.bestseller-title { color: #fff; }
+.bestseller-price { color: #ffe49d; }
+
+.bestseller-desc {
+  font-size: 0.96rem;
+  margin-bottom: 18px;
+  color: #d2d2d2;
+}
+
+.bestseller-qty {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+.bestseller-qty-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bestseller-qty-btns button {
+  border: none;
+  background: #30313b;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.bestseller-qty-btns span {
+  display: inline-block;
+  min-width: 16px;
+  text-align: center;
+}
+
+.bestseller-order-btn {
+  margin-top: 7px;
+  padding: 10px 0;
+  width: 90%;
+  max-width: 260px;
+  border: none;
+  background: #3c3c40;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 17px;
+  font-size: 1.08rem;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
