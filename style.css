@@ -130,17 +130,6 @@ body {
   min-height: 470px;
 }
 
-.carousel-slide {
-  width: 70vw;
-  max-width: 1050px;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.06);
-  overflow: visible;
-}
-
 .carousel-img {
   width: 310px;
   height: 360px;
@@ -230,4 +219,32 @@ body {
 .dot.active {
   background: #222;
   opacity: 1;
+}
+
+.carousel-slides {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-slide {
+  display: none;
+  align-items: center;
+  width: 70vw;
+  max-width: 1050px;
+  min-height: 400px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.06);
+  overflow: visible;
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  margin: auto;
+}
+
+.carousel-slide.active {
+  display: flex;
+  position: relative;
 }
