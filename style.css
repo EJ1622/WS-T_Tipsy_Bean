@@ -1,28 +1,23 @@
 body {
-  background: #fff;
+  background: #fffbe1;
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
 }
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 160px;
-  background: #fffbe1;
-}
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo-img {
-  height: 40px;
-  margin-right: 12px;
-  border-radius: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 70px;
+    background: #fffbe1;
+    box-sizing: border-box;
 }
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 32px;
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding-left: 0;
 }
 .nav-links li {
   position: relative;
@@ -52,4 +47,58 @@ body {
 }
 .nav-links a:hover::after:not(.active) {
   width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-left: 4vw;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 2rem 0;
+  letter-spacing: 1.5px;
+  line-height: 1.05;
+}
+
+.shop-btn {
+  background: #fff;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.9em 2em;
+  border-radius: 2em;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.shop-btn:hover {
+  background: #ffe0b2;
+  color: #512700;
 }
