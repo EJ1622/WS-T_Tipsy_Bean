@@ -117,3 +117,117 @@ body {
   background: #ffe0b2;
   color: #512700;
 }
+
+.carousel {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0 56px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 470px;
+}
+
+.carousel-slide {
+  width: 70vw;
+  max-width: 1050px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.06);
+  overflow: visible;
+}
+
+.carousel-img {
+  width: 310px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-left: 28px;
+  background: #f5f3ed;
+}
+
+.carousel-content {
+  padding: 32px 48px 32px 48px;
+  flex: 1 1 0;
+  text-align: left;
+}
+
+.carousel-content h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.carousel-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 28px;
+  line-height: 1.6;
+  max-width: 410px;
+}
+
+.carousel-btn {
+  background: #111;
+  color: #fff;
+  padding: 0.7em 2.1em;
+  border-radius: 2em;
+  font-size: 1.07rem;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.carousel-btn:hover {
+  background: #8d7033;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #333;
+  font-size: 2.7rem;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  outline: none;
+}
+
+.carousel-arrow.left { left: 16px; }
+.carousel-arrow.right { right: 16px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  background: #c4c4c4;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.6;
+  transition: background 0.3s, opacity 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #222;
+  opacity: 1;
+}
