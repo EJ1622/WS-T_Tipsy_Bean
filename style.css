@@ -1,5 +1,5 @@
 body {
-  background: #fffbe1;
+  background: #fff;
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
 }
@@ -23,31 +23,46 @@ body {
   position: relative;
 }
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: #222;
   font-weight: 500;
   padding-bottom: 3px;
   transition: color 0.2s;
 }
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #222;
+  transition: width 0.25s;
+}
+.nav-links a:hover::after:not(.active) {
+  width: 100%;
+}
+.nav-links a:not(.active):hover {
+  border-bottom: 2px solid #222;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
 .nav-links a.active {
   color: #222;
   border-bottom: 2px solid #222;
   font-weight: 700;
 }
-.nav-links a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #222;
-  transition: width 0.2s;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.nav-links a:hover::after:not(.active) {
+
+.nav-links a.active::after {
   width: 100%;
+  background: #222;
 }
+
 
 .hero {
   position: relative;
