@@ -451,6 +451,14 @@ body {
   margin-top: 0;
 }
 
+@media (max-width: 900px) {
+  .menu-img {
+    width: 95vw;
+    max-width: 400px;
+    margin-bottom: 14px;
+  }
+}
+
 .menu-grid {
   width: 100%;
   max-width: 1050px;
@@ -467,29 +475,32 @@ body {
   margin-bottom: 12px;
 }
 
+.menu-row.reverse {
+  flex-direction: row-reverse;
+}
+
 .menu-img {
   width: 310px;
   height: 205px;
   object-fit: cover;
   border-radius: 8px;
 }
+
 .menu-info {
   flex: 1;
 }
+
 .menu-desc {
   font-size: 1rem;
   color: #222;
   margin-top: 8px;
   line-height: 1.5;
 }
+
 @media (max-width: 900px) {
-  .menu-row {
+  .menu-row,
+  .menu-row.reverse {
     flex-direction: column;
     align-items: flex-start;
-  }
-  .menu-img {
-    width: 95vw;
-    max-width: 400px;
-    margin-bottom: 14px;
   }
 }
