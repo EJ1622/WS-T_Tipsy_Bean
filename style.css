@@ -579,7 +579,7 @@ body {
 
 .story-hero {
   width: 100vw;
-  height: 300px;
+  height: 340px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -590,7 +590,7 @@ body {
 .story-hero-content {
   width: 100%;
   text-align: center;
-  padding-bottom: 28px;
+  padding-bottom: 40px;
 }
 .story-hero h1 {
   color: #fff;
@@ -599,30 +599,63 @@ body {
   text-shadow: 0 2px 8px rgba(0,0,0,0.2);
   margin: 0;
 }
+
 .story-main {
-  max-width: 700px;
-  margin: 32px auto 0 auto;
+  max-width: 750px;
+  margin: 26px auto 0 auto;
   background: #fff;
   border-radius: 8px;
-  padding: 24px 32px;
+  padding: 25px 40px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  font-family: 'Montserrat', Arial, sans-serif;
 }
+
 .story-meta {
   color: #757575;
-  font-size: .97rem;
-  margin-bottom: 18px;
+  font-size: .99rem;
+  margin-bottom: 22px;
+  border-bottom: 1.2px solid #eee;
+  padding-bottom: 10px;
 }
+
 .story-full p {
-  color: #444;
+  color: #666;
   line-height: 1.68;
+  font-size: 1.13rem;
+  margin-bottom: 36px;
 }
-.story-nav, .story-return {
-  margin-top: 28px;
-  color: #555;
+
+.story-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 38px 0 0 0;
+  border-top: 1.2px solid #eee;
+  padding-top: 16px;
 }
-.story-nav a, .story-return a {
-  color: #333;
+.story-nav-prev, .story-nav-next {
+  font-size: 0.97rem;
+  color: #767676;
+}
+.story-nav-prev a,
+.story-nav-next a {
+  color: #23242a;
+  font-weight: 500;
   text-decoration: underline;
-  font-size: 1.03rem;
+  font-size: 1.05rem;
+}
+.story-return {
+  margin-top: 24px;
+}
+.story-return a {
+  color: #23242a;
+  text-decoration: underline;
+  font-size: 1.01rem;
+}
+
+@media (max-width: 800px) {
+  .story-main {
+    padding: 13px 7vw;
+  }
+  .story-hero {
+    height: 180px;
+  }
 }
