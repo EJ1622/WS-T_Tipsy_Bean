@@ -1180,3 +1180,98 @@ body {
   .contact-form button { font-size: 1.01rem; padding: 13px 0; }
   .contact-hero-content h2 { font-size: 1.4rem; }
 }
+
+.contact-details {
+  background: #fff;
+  padding: 44px 0 40px 0;
+  width: 100vw;
+  max-width: 100vw;
+  text-align: center;
+}
+.contact-details h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+.contact-details-sub {
+  color: #222;
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+}
+
+.contact-info {
+  margin: 0 auto 16px auto;
+  text-align: left;
+  max-width: 420px;
+  font-size: 1.25rem;
+}
+.contact-info-item {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-family: inherit;
+  color: #444;
+}
+.contact-icon {
+  font-size: 1.4em;
+}
+
+.contact-map {
+  width: 420px;
+  height: 230px;
+  margin: 0 auto 32px auto;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 1px 12px rgba(30,30,30,0.09);
+}
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-us-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contact-us-form input, .contact-us-form textarea {
+  font-size: 1.13rem;
+  padding: 18px 15px;
+  border-radius: 8px;
+  border: 1.5px solid #eee;
+  background: #fff;
+  color: #222;
+}
+.contact-us-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.contact-us-form button {
+  font-size: 2rem;
+  padding: 16px 0;
+  border: none;
+  border-radius: 3em;
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.contact-us-form button:hover { background: #4c3619; }
+
+@media (max-width: 680px) {
+  .contact-map, .contact-us-form, .contact-info {
+    width: 97vw;
+    max-width: 97vw;
+    min-width: 0;
+  }
+  .contact-map { height: 170px; }
+  .contact-details h2 { font-size: 1.5rem; }
+  .contact-details-sub { font-size: 1.03rem; }
+  .contact-us-form button { font-size: 1.11rem; padding: 9px 0; }
+}
