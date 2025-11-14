@@ -3,130 +3,256 @@
     <head>
         <meta charset="UTF-8">
         <title>Menu | Tipsy Bean</title>
-        <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+         <!-- Google Fonts -->
+          <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
+          <!-- Custom Styles -->
+           <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
-        <nav class="navbar">
-            <div class="logo">
-                <span>Tipsy Bean</span>
+        <!-- Responsive Navbar with overlay for mobile -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">
+                    <span>Tipsy Bean</span>
+                </a>
+
+                <!-- Toggler for mobile overlay -->
+                 <button class="navbar-toggler" type="button" id="mobileNavToggler" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                 </button>
+
+                 <!-- Overlay menu for mobile -->
+                  <div class="nav-overlay" id="navOverlay">
+                    <ul class="nav-links-mobile">
+                        <li><a href="index.html" >Home</a></li>
+                        
+                        <li><a href="menu.html" class="active">Menu</a></li>
+                        
+                        <li><a href="about.html">About Us</a></li>
+                        
+                        <li><a href="events.html">Events</a></li>
+                        
+                        <li><a href="contacts.html">Contact Us</a></li>
+                    
+                    </ul>
+
+                  </div>
+
+                  <!-- Standard nav links for desktop -->
+                   <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-links">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        
+                        <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                        
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        
+                        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                        
+                        <li class="nav-item"><a href="contacts.html" class="nav-link">Contact Us</a></li>
+                    
+                    </ul>
+                
+                </div>
+            
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="menu.html" class="active">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contacts.html">Contact Us</a></li>
-            </ul>
+        
         </nav>
 
         <section class="menu-hero">
             <h2>Our Exquisite Coffee</h2>
+
             <p>Brewed to Perfection</p>
+
         </section>
 
         <section class="menu-grid">
-            <div class="menu-row">
-                <img src="assets/espresso.png" alt="Espresso" class="menu-img">
-                <div class="menu-info">
+            <!-- Coffee Products - Bootstrap grid for responsive layouts -->
+            <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/espresso.png" alt="Espresso" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Espresso</strong>
+
                     <p class="menu-desc">
                         A rich and bold shot of our finest espresso, crafted from premium beans. Experience the intense flavor and smooth finish that sets the perfect foundation for any coffee drink. Ideal as a standalone beverage or as a base for your favorite lattes and cappuccinos.
                     </p>
+
                 </div>
+
             </div>
-            <div class="menu-row reverse">
-                <img src="assets/cappuccino.jpeg" alt="Cappuccino" class="menu-img">
-                <div class="menu-info">
+
+            <div class="menu-row row align-items-center mb-4 flex-md-row-reverse">
+                <div class="col-md-5 col-12">
+                    <img src="assets/cappuccino.jpeg" alt="Cappuccino" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Cappuccino</strong>
+
                     <p class="menu-desc">
                         Our cappuccino combines equal parts espresso, steamed milk, and velvety microfoam. This classic Italian drink offers a harmonious balance of rich coffee flavor and creamy texture. Topped with a sprinkle of cocoa or cinnamon, it's perfect for any time of day.
                     </p>
+
                 </div>
+
             </div>
-            <div class="menu-row">
-                <img src="assets/cold_brew.jpeg" alt="Cold Brew" class="menu-img">
-                <div class="menu-info">
+              
+            <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/cold_brew.jpeg" alt="Cold Brew" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Cold Brew</strong>
+
                     <p class="menu-desc">
                         Enjoy our cold brew coffee, steeped for 12 hours for a smooth and refreshing taste. This method produces a naturally sweet and less acidic coffee, making it perfect for those hot summer days. Served over ice, it’s a revitalizing pick-me-up.
                     </p>
+
                 </div>
+
             </div>
+
         </section>
 
         <section class="menu-hero">
             <h2>Delicious Pastries</h2>
+
             <p>Baked Fresh Daily</p>
+
         </section>
+
         <section class="menu-grid">
-            <div class="menu-row">
-                <img src="assets/croissant.jpeg" alt="Croissant" class="menu-img">
-                <div class="menu-info">
+            <!-- Pastry Products -->
+             <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/croissant.jpeg" alt="Croissant" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Croissant</strong>
+
                     <p class="menu-desc">
                         Indulge in our flaky, buttery croissant that melts in your mouth. Each croissant is hand-rolled and baked to golden perfection, creating layers of delightful texture. Perfect for pairing with your morning coffee or as a savory snack anytime.
                     </p>
+
                 </div>
+
             </div>
-            <div class="menu-row">
-                <img src="assets/blueberry_muffin.jpeg" alt="Blueberry Muffin" class="menu-img">
-                <div class="menu-info">
+
+            <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/blueberry_muffin.jpeg" alt="Blueberry Muffin" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Blueberry Muffin</strong>
+
                     <p class="menu-desc">
                         Our blueberry muffin is packed with fresh blueberries and has a moist, tender crumb. Topped with a crunchy streusel, it strikes the perfect balance between sweet and fruity. Enjoy it warm for a delightful breakfast or afternoon treat.
                     </p>
+
                 </div>
+
             </div>
-            <div class="menu-row">
-                <img src="assets/chocolate_danish.jpeg" alt="Chocolate Danish" class="menu-img">
-                <div class="menu-info">
+
+            <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/chocolate_danish.jpeg" alt="Chocolate Danish" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Chocolate Danish</strong>
+
                     <p class="menu-desc">
                         Indulge in our decadent chocolate danish, filled with rich chocolate and topped with a light glaze. This pastry is the perfect blend of sweet and flaky, making it an irresistible choice for chocolate lovers. Enjoy it with a cup of coffee for a delightful experience.
                     </p>
+
                 </div>
+
             </div>
+
         </section>
 
         <section class="menu-hero">
             <h2>Seasonal Delights</h2>
+
             <p>Limited-Time Offerings</p>
+
         </section>
+
         <section class="menu-grid">
-            <div class="menu-row">
-                <img src="assets/pumpkin_spice_latte.jpeg" alt="Pumpkin Spice Latte" class="menu-img">
-                <div class="menu-info">
+            <!-- Seasonal Items -->
+             <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/pumpkin_spice_latte.jpeg" alt="Pumpkin Spice Latte" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Pumpkin Spice Latte</strong>
+
                     <p class="menu-desc">
                         Warm up with our signature pumpkin spice latte, featuring espresso blended with creamy steamed milk and our special pumpkin spice syrup. Topped with whipped cream and a sprinkle of cinnamon, this seasonal favorite will awaken your autumn spirit.
                     </p>
+
                 </div>
+
             </div>
-            <div class="menu-row">
-                <img src="assets/peppermint_mocha.jpeg" alt="Peppermint Mocha" class="menu-img">
-                <div class="menu-info">
+
+            <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/peppermint_mocha.jpeg" alt="Peppermint Mocha" class="menu-img">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Peppermint Mocha</strong>
+
                     <p class="menu-desc">
                         Celebrate the holidays with our peppermint mocha, a delightful mix of espresso, steamed milk, rich chocolate, and refreshing peppermint flavor. Finished with whipped cream and candy cane sprinkles, it's the perfect festive treat to warm your heart.
                     </p>
+
                 </div>
+
             </div>
-            <div class="menu-row">
-                <img src="assets/iced_berry_lemonade.jpeg" alt="Iced Berry Lemonade" class="menu-img">
-                <div class="menu-info">
+
+            <div class="menu-row row align-items-center mb-4">
+                <div class="col-md-5 col-12">
+                    <img src="assets/iced_berry_lemonade.jpeg" alt="Iced Berry Lemonade" class="menu-img img-fluid">
+                </div>
+
+                <div class="col-md-7 col-12 menu-info">
                     <strong>Iced Berry Lemonade</strong>
+
                     <p class="menu-desc">
                         Refresh yourself with our iced berry lemonade, a vibrant blend of tart lemonade and sweet mixed berries. This invigorating drink is perfect for warm days and offers a fruity twist to keep you cool. Don’t miss out on this seasonal favorite!
                     </p>
+
                 </div>
+
             </div>
+
         </section>
 
-        <footer class="site-footer">
-            <div class="footer-content">
+        <footer class="site-footer bg-light">
+            <div class="footer-content text-center py-3">
                 ©2025 – All Rights Reserved.
             </div>
+
         </footer>
+
+        <!-- Bootstrap JS -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+         <!-- Custom JS for overlay nav -->
+          <script src="script.js"></script>
+
     </body>
+
 </html>
