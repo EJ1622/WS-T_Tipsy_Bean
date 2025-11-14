@@ -588,6 +588,61 @@ body {
   }
 }
 
+/* --- Navbar overlay for mobile */
+
+.nav-overlay {
+  /* Overlay menu, hidden by default */
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.97);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.nav-overlay.open {
+  /* Show ehen toggled */
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-links-mobile {
+  list-style: none;
+  padding: 90px 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  font-size: 1.5rem;
+}
+
+.nav-links-mobile a {
+  display: block;
+  padding: 20px 40px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links-mobile a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none !important; /*Hide desktop links on mobile */
+  }
+}
+
+/* Main content styles */
+
 .menu-hero {
   text-align: center;
   margin: 56px 0 30px 0;
@@ -602,14 +657,6 @@ body {
   margin-top: 0;
 }
 
-@media (max-width: 900px) {
-  .menu-img {
-    width: 95vw;
-    max-width: 400px;
-    margin-bottom: 14px;
-  }
-}
-
 .menu-grid {
   width: 100%;
   max-width: 1050px;
@@ -620,16 +667,13 @@ body {
 }
 
 .menu-row {
-  display: flex;
-  align-items: center;
+  /* Use Bootstrap grid; .row used in HTML structure */
+  /* No direct flex here, Bootstrap handles using .row/.col */
   gap: 36px;
   margin-bottom: 12px;
 }
 
-.menu-row.reverse {
-  flex-direction: row-reverse;
-}
-
+/* Image responsiveness and spacing */
 .menu-img {
   width: 310px;
   height: 205px;
@@ -638,6 +682,7 @@ body {
 }
 
 .menu-info {
+  /* Info block next to images */
   flex: 1;
 }
 
@@ -648,11 +693,46 @@ body {
   line-height: 1.5;
 }
 
+/* --- Responsibe breakpoints for tablets/mobiles --- */
+
 @media (max-width: 900px) {
+  .menu-img {
+    width: 95vw;
+    max-width: 400px;
+    margin-bottom: 14px;
+    height: auto;
+  }
+
   .menu-row,
-  .menu-row.reverse {
-    flex-direction: column;
-    align-items: flex-start;
+  .menu-row.reverse,
+  .flex-md-row-reverse {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 18px;
+  }
+
+  .menu-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-hero {
+    margin: 36px 0 18px 0;
+  }
+
+  .menu-hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .menu-img {
+    max-width: 95vw;
+    border-radius: 6px;
+  }
+
+  .nav-links-mobile {
+    font-size: 1.1rem;
+    padding-top: 65px;
   }
 }
 
