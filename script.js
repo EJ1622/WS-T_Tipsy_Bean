@@ -24,3 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
   
   showSlide(0);
 });
+
+// Bestseller quantity logic
+
+document.querySelectorAll('.bestseller-item').forEach(function(item) {
+  const minusBtn = item.querySelector('button:nth-of-type(1)');
+  const qtySpan = item.querySelector('.bestseller-qty-btns span');
+  const plusBtn = item.querySelector('button:nth-of-type(3)');
+  let qty = 1; // default quantity
+
+  minusBtn.addEventListener('click', function() {
+    if (qty > 1) {
+      qty--;
+      qtySpan.textContent = qty;
+    }
+  });
+  plusBtn.addEventListener('click', function() {
+    qty++;
+    qtySpan.textContent = qty;
+  });
+});
