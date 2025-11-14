@@ -118,7 +118,7 @@ body {
   color: #512700;
 }
 
-.carousel {
+.carousel-section {
   width: 100%;
   background: #fff;
   display: flex;
@@ -128,6 +128,8 @@ body {
   position: relative;
   overflow: hidden;
   min-height: 470px;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 .carousel-img {
@@ -487,6 +489,11 @@ body {
   .hero-content {
     margin-left: 0; 
     text-align: center;
+  }
+
+  .carousel-section {
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 
   .carousel-slide {
