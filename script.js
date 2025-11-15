@@ -44,22 +44,3 @@ document.querySelectorAll('.bestseller-item').forEach(function(item) {
     qtySpan.textContent = qty;
   });
 });
-
-/* JS for mobile navbar overlay */
-
-// Overlay navigation for mobile
-
-const navToggler = document.getElementById('mobileNavToggler');
-const navOverlay = document.getElementById('navOverlay');
-if (navToggler && navOverlay) {
-  navToggler.addEventListener ('click', () => {
-    navOverlay.classList.toggle('open');
-  });
-  // Close the overlay when a menu link is clicked
-
-  navOverlay.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navOverlay.classList.remove('open');
-    });
-  });
-}
