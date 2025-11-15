@@ -1242,6 +1242,30 @@ body {
   .booking-btn { font-size: 1rem; padding: 13px 0; }
 }
 
+.event-card img, .gallery-img img, .event-booking-img-wrap img {
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius:  11px;
+  border-top-right-radius: 11px;
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .event-booking-img-wrap img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .event-card img, .gallery-img img {
+    height: 130px;
+  }
+  
+  .event-booking-img-wrap img {
+    height: 110px;
+  }
+}
+
 .event-gallery {
   background: #fff;
   padding: 55px 0 52px 0;

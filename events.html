@@ -3,108 +3,213 @@
   <head>
     <meta charset="UTF-8">
     <title>Events | Tipsy Bean</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+
+    <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+     <!-- Lightgallery CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css">
+      <!-- Custom Styles -->
+       <link rel="stylesheet" href="style.css">
   </head>
   
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <span>Tipsy Bean</span>
+    <!-- Bootstrap responsive navbar with hamburger on mobile -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-warning bg-opacity-25 sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-semibold" href="#">Tipsy Bean</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav ms-auto nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            
+            <li class="nav-item"><a class="nav-item" href="about.html">About Us</a></li>
+            
+            <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Contact Us</a></li>
+          
+          </ul>
+
+        </div>
+
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
-        <li><a href="contacts.html">Contact Us</a></li>
-      </ul>
+
     </nav>
 
-    <section class="events">
-      <h2>Exciting Events Coming Up!</h2>
-      <p class="events-sub">
-        Join us for a variety of engaging activities centered around coffee.
-      </p>
-      <div class="events-grid">
+    <!-- Upcoming events (responsive Bootstrap cards in a row/column) -->
+     <section class="events py-5 bg-white text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-2">Exciting Events Coming Up!</h2>
+        
+        <p class="events-sub mb-4">Join us for a variety of engaging activities centered around coffee.</p>
+        
+        <div class="row justify-content-center g-4">
+          <!-- Event 1 -->
+           <div class="col-12 col-md-6 col-lg-4">
+            <div class="event-card shadow-sm h-100 bg-white rounded-3">
+              <a href="event_workshop.html">
+                <img src="assets/barista_workshop.png" alt="Barista Skills Workshop" class="w-100">
+              </a>
               
-        <!-- Event 1 -->
-         <div class="event-card">
-          <a href="event_workshop.html">
-            <img src="assets/barista_workshop.png" alt="Barista Skills Workshop">
-          </a>
-          <div class="event-info">
-            <strong>Barista Skills Workshop</strong>
-            <p>November 11, 2025</p>
-          </div>
-        </div>
-        
-        <!-- Event 2 -->
-         <div class="event-card">
-          <a href="event_meetup.html">
-            <img src="assets/community_meetup.jpeg" alt="Community Coffee Meet-Up">
-          </a>
-          <div class="event-info">
-            <strong>Community Coffee Meet-Up</strong>
-            <p>November 11, 2025</p>
-          </div>
-        </div>
-        
-        <!-- Event 3 -->
-         <div class="event-card">
-          <a href="event_extravaganza.html">
-            <img src="assets/tasting_extravaganza.jpeg" alt="Coffee Tasting Extravaganza">
-          </a>
-          <div class="event-info">
-            <strong>Coffee Tasting Extravaganza</strong>
-            <p>November 11, 2025</p>
-          </div>
-        </div>
-      </div>
-    </section>
+              <div class="event-info py-3">
+                <strong>Barista Skills Workshop</strong>
+                
+                <p>November 11, 2025</p>
+              
+              </div>
 
-    <section class="event-booking">
-      <h2>Reserve Your Spot Today!</h2>
-      <p class="event-booking-sub">
-        Booking your place for our exciting events has never been easier.
-      </p>
-      <div class="event-booking-img-wrap">
-        <img src="assets/booking_event.jpeg" alt="Reserve Event">
+            </div>
+
+           </div>
+           
+           <!-- Event 2 -->
+            
+           <div class="col-12 col-md-6 col-lg-4">
+            <div class="event-card shadow-sm h-100 bg-white rounded-3">
+              <a href="event_meetup.html">
+                <img src="assets/community_meetup.jpeg" alt="Community Coffee Meet-Up" class="w-100">
+              </a>
+              
+              <div class="event-info py-3">
+                <strong>Community Coffee Meet-Up</strong>
+                
+                <p>November 11, 2025</p>
+
+              </div>
+
+            </div>
+
+           </div>
+           
+           <!-- Event 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="event-card shadow-sm h-100 bg-white rounded-3">
+                <a href="event_extravaganza.html">
+                  <img src="assets/tasting_extravaganza.jpeg" alt="Coffee Tasting Extravaganza" class="w-100">
+                </a>
+                
+                <div class="event-info py-3">
+                  <strong>Coffee Tasting Extravaganza</strong>
+                  
+                  <p>November 11, 2025</p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+        </div>
+
       </div>
-      <div class="event-booking-details">
-        <h3>Online Booking System</h3>
-        <blockquote>
-          Our user-friendly online booking system allows you to secure your spot for any upcoming event or workshop at Tipsy Bean. Simply select the event you’re interested in, choose your date and time, and complete the reservation form. You will receive a confirmation email shortly after, ensuring your place is reserved. Don’t wait too long, as spots fill up quickly due to high demand!
-        </blockquote>
-        <form class="booking-form">
-          <input type="datetime-local" placeholder="Select date and time">
-          <div class="booking-tz">
-            Event time zone: Asia/Shanghai GMT+08:00
+
+     </section>
+     
+     <!-- Booking section -->
+      <section class="event-booking py-5">
+        <div class="container">
+          <h2 class="fw-bold mb-3">Reserve Your Spot Today!</h2>
+          
+          <p class="event-booking-sub mb-4">Booking your place for our exciting events has never been easier.</p>
+          
+          <div class="event-booking-img-wrap mb-4 mx-auto shadow-sm rounded-4" style="max-width: 860px;overflow: hidden;">
+            <img src="assets/booking_event.jpeg" alt="Reserve Event">
           </div>
-          <button type="submit" class="booking-btn">Book Now</button>
-        </form>
-      </div>
-    </section>
+          
+          <div class="event-booking-details bg-white mx-auto p-4 mb-4 rounded-3 shadow-sm" style="max-width: 620px;">
+            <h3 class="mb-2">Online Booking System</h3>
+            
+            <blockquote class="blockquote mb-3 px-3 border-start border-3 border-warning">
+              Our user-friendly online booking system allows you to secure your spot for any upcoming event or workshop at Tipsy Bean. Simply select the event you’re interested in, choose your date and time, and complete the reservation form. You will receive a confirmation email shortly after, ensuring your place is reserved. Don’t wait too long, as spots fill up quickly due to high demand!
+            </blockquote>
 
-    <section class="event-gallery">
-      <h2>Memorable Moments</h2>
-      <p class="event-gallery-sub">
-        Take a look back at the wonderful times we've shared during our previous events.
-      </p>
-      <div class="event-gallery-grid">
-        <div class="gallery-img"><img src="assets/gallery1.jpeg" alt="Memorable Moment 1"></div>
-        <div class="gallery-img"><img src="assets/gallery2.jpeg" alt="Memorable Moment 2"></div>
-        <div class="gallery-img"><img src="assets/gallery3.jpeg" alt="Memorable Moment 3"></div>
-        <div class="gallery-img"><img src="assets/gallery4.jpeg" alt="Memorable Moment 4"></div>
-      </div>
-    </section>
+            <!-- Simple client-side validation: date must be selected before submitting -->
+             <form class="booking-form" id="bookingForm" novalidate>
+              <input id="eventDate" type="datetime-local" class="form-control mb-2" required>
+              <div class="booking-tz mb-2">
+                Event time zone: Asia/Shanghai GMT+08:00
+              </div>
+              
+              <button type="submit" class="booking-btn btn btn-dark w-100">Book Now</button>
 
-    <footer class="site-footer">
-      <div class="footer-content">
-        ©2025 - All Rights Reserved.
-      </div>
-    </footer>
-  
+              <div id="formMessage" class="text-success mt-2" style="display: none;"></div>
+            
+            </form>
+          
+          </div>
+
+        </div>
+      
+      </section>
+
+      <!-- Photo Gallery (memorable moments) -->
+       <section class="event-gallery py-5 bg-white text-center">
+        <div class="container">
+          <h2 class="fw-bold mb-2">Memorable Moments</h2>
+          
+          <p class="event-gallery-sub mb-4">Take a look back at the wonderful times we've shared during our previous events.</p>
+          
+          <div class="row g-2 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="assets/gallery1.jpeg" class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3">
+                <img src="assets/gallery1.jpeg" alt="Memorable Moment 1" class="w-100">
+              </a>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="assets/gallery2.jpeg" class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3">
+                <img src="assets/gallery2.jpeg" alt="Memorable Moment 2" class="w-100">
+              </a>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="assets/gallery3.jpeg" class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3">
+                <img src="assets/gallery3.jpeg" alt="Memorable Moment 3" class="w-100">
+              </a>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="assets/gallery4.jpeg" class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3">
+                <img src="assets/gallery4.jpeg" alt="Memorable Moment 4" class="w-100">
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+       </section>
+
+       <!-- Footer -->
+       <footer class="site-footer py-3 bg-body-tertiary text-center text-muted small">
+        <div class="footer-content">
+          ©2025 - All Rights Reserved.
+        </div>
+      
+      </footer>
+
+      <!-- Bootstrap JS bundle (enables navbar toggling) -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+       <!-- Lightgallery bundle for gallery popups-->
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
+
+        <script src="script.js"></script>
+      
   </body>
 </html>

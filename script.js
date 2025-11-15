@@ -44,3 +44,27 @@ document.querySelectorAll('.bestseller-item').forEach(function(item) {
     qtySpan.textContent = qty;
   });
 });
+
+// Lightgallery initialization for event photo grid
+lightgallery(document.getElementById('lightgallery'), {
+  plugins:[lgZoom],
+  speed: 500,
+  download: false,
+});
+
+//Booking form handler (client-side validation and siple feedback)
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const dateField = document.getElementById('eventDate');
+  const msg = document.getElementById('formMessage');
+  if (!dateField.value) {
+    dateField.classList.add('is-invalid');
+    msg.style.display = 'none';
+  } else {
+    dateField.classList.remove('is-invalid')
+    msg.textContent = 'Thank you! Your reservation is being processed.';
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 4000);
+    this.reset();
+  }
+});
