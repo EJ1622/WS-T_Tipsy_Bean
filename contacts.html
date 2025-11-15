@@ -3,79 +3,127 @@
     <head>
         <meta charset="UTF-8">
         <title>Contact Us | Tipsy Bean</title>
-        <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+
+        <!-- Google Fonts: Montserrat -->
+         <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
+         <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+          <!-- Custom CSS -->
+           <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <nav class="navbar">
-            <div class="logo">
-                <span>Tipsy Bean</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contacts.html" class="active">Contact Us</a></li>
-            </ul>
-        </nav>
+        <!-- Responsive Bootstrap Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-warning bg-opacit-25 sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-semibold" href="#">Tipsy Bean</a>
 
-        <section class="contact-hero">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-links">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        
+                        <li class="nav-item"><a href="contacts.html" class="nav-link active">Contact Us</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+         </nav>
+
+         <!-- Hero Subscription Section -->
+          <section class="contact-hero position-relative d-flex justify-content-center align-items-center">
             <div class="contact-hero-bg">
                 <img src="assets/contact_us_hero.jpeg" alt="Coffee Shop overhead view">
             </div>
-            <div class="contact-hero-content">
-                <h2>Stay in the Loop</h2>
+            
+            <div class="contact-hero-content text-center">
+                <h2 class="fw-bold">Stay in the Loop</h2>
+                
                 <p>Subscribe for exclusive news and promotions</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <button type="submit">Submit</button>
+                
+                <form class="contact-form" id="subscribeForm" autocomplete="off" novalidate>
+                    <input type="text" id="subscribeName" class="form-control mb-2" placeholder="Name" required>
+                    <input type="email" id="subscribeEmail" class="form-control mb-2" placeholder="Email" required>
+                    <button type="submit" class="btn btn-dark btn-lg w-100 mt-2 rounded-pill">Submit</button>
+
+                    <div id="subscribeMsg" class="text-success mt-3" style="display: none;"></div>
+                
                 </form>
+            
             </div>
-        </section>
 
-        <section class="contact-details">
-            <h2>Find Us Easily</h2>
-            <p class="contact-details-sub">
-                Discover our shop hours and connect with us
-            </p>
-            
-            <div class="contact-info">
-                <div class="contact-info-item">
-                    <span class="contact-icon">📍</span>
-                    <span>Cabuyao City, 4025 Laguna</span>
-                </div>
-                <div class="contact-info-item">
-                    <span class="contact-icon">⏰</span>
-                    <span>Open Daily From 4PM to 1AM</span>
-                </div>
-                <div class="contact-info-item">
-                    <span class="contact-icon">📱</span>
-                    <span>0994 723 1071</span>
-                </div>
-            </div>
-            
-            <div class="contact-map">
-                <iframe 
-                src="https://www.google.com/maps/place/Tipsy+Bean/@14.2348211,121.1474265,4519m/data=!3m2!1e3!4b1!4m6!3m5!1s0x33bd63cb01dded99:0xda9273c6357bcf!8m2!3d14.2348005!4d121.1577262!16s%2Fg%2F11l6hssjcp?entry=ttu&g_ep=EgoyMDI1MTExMS4wIKXMDSoASAFQAw%3D%3D"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            
-            <form class="contact-us-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+          </section>
 
-        <footer class="site-footer">
-            <div class="footer-content">
-                ©2025 - All Rights Reserved.
+          <!-- Contact Details and Form -->
+           <section class="contact-details py-5">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-2">Find Us Easily</h2>
+                
+                <p class="contact-details-sub mb-4">
+                    Discover our shop hours and connect with us
+                </p>
+                
+                <div class="contact-info mx-auto mb-4">
+                    <div class="contact-info-item"><span class="contact-icon">📍</span> Cabuyao City, 4025 Laguna</div>
+                    
+                    <div class="contact-info-item"><span class="contact-icon">⏰</span> Open Daily From 4PM to 1AM</div>
+                    
+                    <div class="contact-info-item"><span class="contact-icon">📱</span> 
+                        
+                        <a href="tel:09947231071" class="text-decoration-underline"> 0994 723 1071</a>
+                    
+                    </div>
+                
+                </div>
+
+                <!-- Responsive embedded map -->
+                 <div class="contact-map mb-4 mx-auto rounded-3 overflow-hidden shadow-sm" style="max-width: 420px;">
+                    <iframe src="https://www.google.com/maps/place/Tipsy+Bean/@14.2348211,121.1474265,4519m/data=!3m2!1e3!4b1!4m6!3m5!1s0x33bd63cb01dded99:0xda9273c6357bcf!8m2!3d14.2348005!4d121.1577262!16s%2Fg%2F11l6hssjcp?entry=ttu&g_ep=EgoyMDI1MTExMS4wIKXMDSoASAFQAw%3D%3D" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                 </div>
+                 
+                 <form class="contact-us-form mx-auto" id="contactForm" style="max-width: 420px;" autocomplete="off" novalidate>
+                    <input type="text" id="contactName" class="form-control mb-2" placeholder="Name" required>
+                    <input type="email" id="contactEmail" class="form-control mb-2" placeholder="Email" required>
+                    <textarea id="contactMessage" class="form-control mb-2" placeholder="Message" required rows="4"></textarea>
+                    
+                    <button type="submit" class="btn btn-dark btn-lg w-100 mt-2 rounded-pill">Submit</button>
+
+                    <div id="contactMsg" class="text-success mt-3" style="display: none;"></div>
+
+                 </form>
+
             </div>
-        </footer>
+
+           </section>
+
+           <!-- Footer -->
+            <footer class="site-footer py-3 bg-body-tertiary text-center text-muted small">
+                <div class="footer-content">
+                    ©2025 - All Rights Reserved.
+                </div>
+
+            </footer>
+
+            <!-- Bootstrap JS (with Popper for navbar Toggler)-->
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+             <!-- Custom Scripts -->
+              <script src="script.js"></script>
 
     </body>
+
 </html>

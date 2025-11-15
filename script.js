@@ -68,3 +68,54 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     this.reset();
   }
 });
+
+// Subscription form feedback
+document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('subscribeName');
+  const email = document.getElementById('subscribeEmail');
+  const msg = document.getElementById('subscribeMsg');
+  let isValid = true;
+  
+  // Simple validation
+  if (!name.value.trim()) { name.classList.add('is-invalid'); isValid = false; }
+  else { name.classList.remove('is-invalid'); }
+  if (!email.value.trim() || !/\S+@\S+\.\S+/.test(email.value)) { email.classList.add('is-invalid'); isValid = false; }
+  else { email.classList.remove('is-invalid'); }
+  
+  if (isValid) {
+    msg.textContent = "Thank you for subscribing!";
+    msg.style.display = 'block';
+    this.reset();
+    setTimeout(() => { msg.style.display = 'none'; }, 3500);
+  } else {
+    msg.style.display = 'none';
+  }
+});
+
+// Contact form feedback
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('contactName');
+  const email = document.getElementById('contactEmail');
+  const message = document.getElementById('contactMessage');
+  const msg = document.getElementById('contactMsg');
+  let isValid = true;
+
+  // Simple validation
+  if (!name.value.trim()) { name.classList.add('is-invalid'); isValid = false; }
+  else { name.classList.remove('is-invalid'); }
+  if (!email.value.trim() || !/\S+@\S+\.\S+/.test(email.value)) { email.classList.add('is-invalid'); isValid = false; }
+  else { email.classList.remove('is-invalid'); }
+  if (!message.value.trim()) { message.classList.add('is-invalid'); isValid = false; }
+  else { message.classList.remove('is-invalid'); }
+
+  if (isValid) {
+    msg.textContent = "Thank you for reaching out! We’ll get back to you soon.";
+    msg.style.display = 'block';
+    this.reset();
+    setTimeout(() => { msg.style.display = 'none'; }, 3500);
+  } else {
+    msg.style.display = 'none';
+  }
+});
