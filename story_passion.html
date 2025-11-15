@@ -1,54 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>The Passion Behind Our Coffee | About Us</title>
-        <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <nav class="navbar">
-        <div class="logo">
-          <span>Tipsy Bean</span>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html" class="active">About Us</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="contacts.html">Contact Us</a></li>
-        </ul>
-      </nav>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Passion Behind Our Coffee | About Us</title>
+    
+    <!-- Google Fonts: Montserrat -->
+     <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
+     <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+      <!-- Custom CSS -->
+       <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning bg-opacity-25 sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-semibold" href="#">Tipsy Bean</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggler="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
         
-      <header class="story-hero" style="background-image:url('assets/about_story3.jpeg');">
-        <div class="story-hero-content">
-          <h1>The Passion Behind Our Coffee</h1>
+        <div class="collapsen navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            
+            <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Contact Us</a></li>
+          
+          </ul>
+
         </div>
-      </header>
-        
-      <section class="story-main">
-        <div class="story-meta">
-          September 6, 2025 &bull; Our Story
-        </div>
-        <div class="story-full">
-          <p>
-            At Tipsy Bean, coffee is not just a beverage; it's an experience. Each blend is carefully crafted to celebrate unique flavors and aromas, elevating every moment into a cozy ritual. Our passion for sourcing the finest beans and mastering the art of brewing ensures that every cup offers warmth, comfort, and inspiration—connecting people, awakening senses, and making each day memorable.
-          </p>
-        </div>
-        <div class="story-nav-row">
-          <div class="story-nav-prev">
-            &lt; Previous<br>
-            <a href="story_sustainability.html">Our Commitment to Sustainability</a>
-          </div>
-          <div class="story-nav-next">
-            Next &gt;<br>
-            <a href="story_birth.html">The Birth of Tipsy Bean</a>
-          </div>
-        </div>
-        <div class="story-return">
-          &lt; <a href="about.html">Return to site</a>
-        </div>
+
       </div>
+
+    </nav>
+    
+    <header class="story-hero" style="background-image:url('assets/about_story3.jpeg');">
+      <div class="story-hero-content">
+        <h1>The Passion Behind Our Coffee</h1>
+      
+      </div>
+    
+    </header>
+    
+    <section class="story-main bg-white rounded shadow-sm my-4 px-3 py-4 mx-auto" style="max-width: 750px;">
+      <div class="story-meta border-bottom pb-2 small text-muted mb-3">
+        September 6, 2025 &bull; Our Story
+      </div>
+      
+      <div class="story-full mb-4">
+        <p>
+          At Tipsy Bean, coffee is not just a beverage; it's an experience. Each blend is carefully crafted to celebrate unique flavors and aromas, elevating every moment into a cozy ritual. Our passion for sourcing the finest beans and mastering the art of brewing ensures that every cup offers warmth, comfort, and inspiration—connecting people, awakening senses, and making each day memorable.
+        </p>
+      
+      </div>
+      
+      <div class="story-nav-row d-flex justify-content-between border-top pt-3 mt-3">
+        <div class="story-nav-prev text-start">
+          &lt; Previous<br>
+          <a href="story_sustainability.html" class="text-decoration-underline fw-medium">Our Commitment to Sustainability</a>
+        
+        </div>
+        
+        <div class="story-nav-next text-end">
+          Next &gt;<br>
+          <a href="story_birth.html" class="text-decoration-underline fw-medium">The Birth of Tipsy Bean</a>
+        
+        </div>
+      
+      </div>
+      
+      <div class="story-return mt-3">
+        &lt; <a href="about.html" class="text-decoration-underline">Return to site</a>
+      
+      </div>
+    
     </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  
   </body>
+  
 </html>
