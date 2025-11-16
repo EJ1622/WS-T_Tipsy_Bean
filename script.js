@@ -28,18 +28,17 @@ document.addEventListener('DOMContentLoaded', function () {
 // Bestseller quantity logic
 
 document.querySelectorAll('.bestseller-item').forEach(function(item) {
-  const minusBtn = item.querySelector('button:nth-of-type(1)');
+  const btns = item.querySelectorAll('.bestseller-qty-btns button');
   const qtySpan = item.querySelector('.bestseller-qty-btns span');
-  const plusBtn = item.querySelector('button:nth-of-type(3)');
   let qty = 1; // default quantity
 
-  minusBtn.addEventListener('click', function() {
+  btns[0].addEventListener('click', function() {
     if (qty > 1) {
       qty--;
       qtySpan.textContent = qty;
     }
   });
-  plusBtn.addEventListener('click', function() {
+  btns[1].addEventListener('click', function() {
     qty++;
     qtySpan.textContent = qty;
   });
