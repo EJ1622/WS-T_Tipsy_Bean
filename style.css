@@ -15,11 +15,14 @@
   }
 }
 
+/* General body styles */
 body {
   background: #ffffff;
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
+/* Navbar Container */
 .navbar {
     width: 100%;
     display: flex;
@@ -28,7 +31,10 @@ body {
     padding: 22px 70px;
     background: #fffbe1;
     box-sizing: border-box;
+    flex-wrap: wrap; /*Wrap on smaller devices */
 }
+
+/* Navigation links styling */
 .nav-links {
     display: flex;
     list-style: none;
@@ -36,9 +42,12 @@ body {
     margin: 0;
     padding-left: 0;
 }
+
 .nav-links li {
   position: relative;
 }
+
+/* Link hover effect */
 .nav-links a {
   position: relative;
   text-decoration: none;
@@ -69,6 +78,7 @@ body {
   width: 100%;
 }
 
+/* Active state for nav links */
 .nav-links a.active {
   color: #222;
   border-bottom: 2px solid #222;
@@ -80,7 +90,13 @@ body {
   background: #222;
 }
 
+/* Focus outline for keyboard navigation */
+.nav-links a:focus {
+  outline: 2px solid #222;
+  outline-offset: 4px;
+}
 
+/* Hero background and overlay */
 .hero {
   position: relative;
   width: 100%;
@@ -90,7 +106,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
+  align-items: center; 
+  min-height:  400px; /* Prevent collapse on small screens */
 }
 
 .hero::before {
@@ -116,6 +133,7 @@ body {
   letter-spacing: 1px;
 }
 
+/* Hover transition for buttons */
 .shop-btn {
   display: inline-block;
   margin-top: 1vw;
@@ -127,7 +145,7 @@ body {
   border-radius: 2em;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   font-size: 1.1rem;
-  transition: background 0.2s, color 0.2s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .shop-btn:hover {
@@ -458,7 +476,6 @@ body {
 
 /* ---------------------------------------- */
 /* Media Queries for Home Page */
-
 @media (max-width: 1200px) {
   .hero {
     height: 60vh;
@@ -474,6 +491,8 @@ body {
   }
 }
 
+
+/* Responsive navbar padding */
 @media (max-width: 992px) {
   .navbar {
     padding: 12px 28px;
@@ -513,12 +532,11 @@ body {
     margin-bottom: 32px;
   }
 
+  /* Improve carousel on smaller screens */
   .carousel-slide {
     flex-direction: column;
-    align-items: center;
     min-height: 350px;
     padding: 16px 8px 40px 8px;
-    position: relative;
   }
   
   .carousel-img { 
@@ -602,6 +620,13 @@ body {
   .bestseller-item img { 
     width: 100px; 
     height: 80px; 
+  }
+}
+
+/* Extra large screens */
+@media (max-width: 1600px) {
+  .hero-content h1 {
+    font-size: 4rem;
   }
 }
 

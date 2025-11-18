@@ -1,11 +1,15 @@
-// carousel logic for custom slides: vanilla JS, works with Bootstrap!
+// Custom Carousel Logic
+
+// Wait for DOM content to load
 document.addEventListener('DOMContentLoaded', function () {
+  // Select carousel elements
   const slides = document.querySelectorAll('.carousel-slide');
   const dots = document.querySelectorAll('.dot');
   const leftArrow = document.querySelector('.carousel-arrow.left');
   const rightArrow = document.querySelector('.carousel-arrow.right');
-  let current = 0;
+  let current = 0; //Index of current slide
 
+  // Function to reset and show slide based on index
   function showSlide(index) {
     if (index < 0) index = slides.length - 1;
     if (index >= slides.length) index = 0;
@@ -16,12 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
     current = index;
   }
 
+  // Event listeners for arrows
   leftArrow.addEventListener('click', () => showSlide(current - 1));
   rightArrow.addEventListener('click', () => showSlide(current + 1));
+
+  // Event listeners for dots
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => showSlide(i));
   });
   
+  //Initialize the carousel to first slide
   showSlide(0);
 });
 
@@ -32,12 +40,15 @@ document.querySelectorAll('.bestseller-item').forEach(function(item) {
   const qtySpan = item.querySelector('.bestseller-qty-btns span');
   let qty = 1; // default quantity
 
+  // Decrease quantity
   btns[0].addEventListener('click', function() {
     if (qty > 1) {
       qty--;
       qtySpan.textContent = qty;
     }
   });
+
+  // Increase quantity
   btns[1].addEventListener('click', function() {
     qty++;
     qtySpan.textContent = qty;
