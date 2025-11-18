@@ -630,7 +630,7 @@ body {
   }
 }
 
-/* Main content styles */
+/* Main  menu content styles */
 
 .menu-hero {
   text-align: center;
@@ -638,7 +638,8 @@ body {
 }
 .menu-hero h2 {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.3rem, 2.5vw, 2.8rem);
+  /* Fluid font size for TV/laptop/movile */
   margin-bottom: 7px;
 }
 .menu-hero p {
@@ -646,6 +647,7 @@ body {
   margin-top: 0;
 }
 
+/* Responsive Meni Grid */
 .menu-grid {
   width: 100%;
   max-width: 1050px;
@@ -655,17 +657,16 @@ body {
   gap: 48px;
 }
 
+/* Individual menu row */
 .menu-row {
-  /* Use Bootstrap grid; .row used in HTML structure */
-  /* No direct flex here, Bootstrap handles using .row/.col */
   gap: 36px;
   margin-bottom: 12px;
 }
 
-/* Image responsiveness and spacing */
+/* Menu images */
 .menu-img {
-  width: 310px;
-  height: 205px;
+  width: clamp(180px, 25vw, 310px); /* Scales up fir big screen */
+  height: clamp(120px, 17vw, 205px);
   object-fit: cover;
   border-radius: 8px;
 }
@@ -682,7 +683,7 @@ body {
   line-height: 1.5;
 }
 
-/* --- Responsibe breakpoints for tablets/mobiles --- */
+/* --- Responsive breakpoints for tablets/mobiles --- */
 
 @media (max-width: 900px) {
   .menu-img {
@@ -692,9 +693,7 @@ body {
     height: auto;
   }
 
-  .menu-row,
-  .menu-row.reverse,
-  .flex-md-row-reverse {
+  .menu-row {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 18px;
@@ -722,6 +721,22 @@ body {
   .nav-links-mobile {
     font-size: 1.1rem;
     padding-top: 65px;
+  }
+}
+
+/* Ultra-wide breakpoint for TVs (4K, landscape tablets, displays >1800px) */
+@media (max-width: 1800px) {
+  .menu-hero h2 {
+    font-size: 3rem;
+  }
+
+  .menu-img {
+    width: 500px;
+    height: 350px;
+  }
+
+  .menu-row {
+    gap: 70px; /* More space for big screens */
   }
 }
 
