@@ -1,280 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>About Us| Tipsy Bean</title>
 
         <!-- Responsive viewport meta tag -->
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <!-- Goole Fonts: Montserrat -->
-          <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
-          <!-- Bootstrap CSS -->
-           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-           <!-- Custom CSS -->
-            <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <!-- Goole Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        
+        <!-- Bootstrap CSS (5.3.2) -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous" />
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css" />
     </head>
-
+    
     <body>
         <!-- Main navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
             <div class="container-fluid">
                 <!-- Brand -->
-                 <a class="navbar-brand fw-semibold" href="index.html">Tipsy Bean</a>
-                 
-                 <!-- Toggler button for small screens -->
-                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand fw-semibold" href="index.html">
+                    Tipsy Bean
+                </a>
+                
+                <!-- Toggler button for small screens -->
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                    >
                     <span class="navbar-toggler-icon"></span>
-
-                 </button>
-
-                 <!-- Navbar Links -->
-                  <div class="collapse navbar-collapse" id="navbarNav">
+                </button>
+                
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto nav-links">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
                         
-                        <li class="nav-item"><a class="nav-link" href="menu.html" aria-current="page">Menu</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html" aria-current="page">Menu</a>
+                        </li>
                         
-                        <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">About Us</a>
+                        </li>
                         
-                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">Events</a>
+                        </li>
                         
-                        <li class="nav-item"><a class="nav-link" href="contacts.html">Contact Us</a></li>
-                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Contact Us</a>
+                        </li>
                     </ul>
-
                 </div>
-
             </div>
-
         </nav>
-
+        
         <!-- Main content sections start -->
-         <main>
+        <main>
             <!-- About Journey Section -->
-             <section class="about-journey py-5">
+            <section class="about-journey py-5">
                 <div class="container text-center">
-                    <h2 class="mb-3">Our Journey Begins</h2>
+                    <h1 class="mb-3">Our Journey Begins</h1>
                     
-                    <p class="about-subtitle mb-4">Crafting Moments, One Cup at a Time</p>
+                    <p class="about-subtitle mb-4">
+                        Crafting Moments, One Cup at a Time
+                    </p>
                     
                     <!-- Bootstrap grid for responsive cards -->
-                     <div class="row justify-content-center g-4">
+                    <div class="row justify-content-center g-4">
                         <!-- Card 1 -->
-                         <div class="col-md-6 col-lg-4">
-                            <div class="card shadow-sm">
-                                <a href="story_birth.html">
-                                    <img src="assets/about_story1.jpeg" class="card-img-top" alt="The Birth of Tipsy Bean">
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card shadow-sm h-100">
+                                <a href="story_birth.html" class="card-img-link">
+                                    <img 
+                                        src="assets/about_story1.jpeg" 
+                                        class="card-img-top" 
+                                        alt="Illustration representing the founding of Tipsy Bean"
+                                        />
                                 </a>
-                            
+                                
                                 <div class="card-body text-start">
-                                    <strong class="card-title d-block mb-1">The Birth of Tipsy Bean</strong>
-                                
-                                    <span class="about-date text-muted d-block mb-2">September 6, 2025</span>
-                                
+                                    <h2 class="card-title h5 mb-1">
+                                        The Birth of Tipsy Bean
+                                    </h2>
+                                    
+                                    <span class="about-date text-muted d-block mb-2">
+                                        September 6, 2025
+                                    </span>
+                                    
                                     <p class="card-text">
-                                        Tipsy Bean was founded out of a love for high-quality coffee and the desire to create a welcoming...
+                                        Tipsy Bean grew from a shared love of thoughtfully sourced coffee and the dream of building a cozy neighborhood gathering place.
                                     </p>
-                            
-                                </div>
-                        
-                            </div>
-                        
-                         </div>
-                     
-                         <!-- Card 2 -->
-                          <div class="col-md-6 col-lg-4">
-                            <div class="card shadow-sm">
-                                <a href="story_sustainability.html">
-                                    <img src="assets/about_story2.jpeg" class="card-img-top" alt="Sustainability">
-                                </a>
-                            
-                                <div class="card-body text-start">
-                                    <strong class="card-title d-block mb-1">Our Commitment to Sustainability</strong>
-                                
-                                    <span class="about-date text-muted d-block mb-2">September 6, 2025</span>
-                                
-                                    <p class="card-text">
-                                        We believe in serving coffee that not only delights the palate but also supports the environment....
-                                    </p>
-                            
-                                </div>
-                        
-                            </div>
 
-                          </div>
-                      
-                          <!-- Card 3 -->
-                           <div class="col-md-6 col-lg-4">
-                            <div class="card shadow-sm">
+                                    <!-- CTA: Goes to full story -->
+                                    <a href="story_birth.html" class="btn btn-sm btn-outline-primary">
+                                        Read our origin story
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card shadow-sm h-100">
+                                <a href="story_sustainability.html" class="card-img-link">
+                                    <img 
+                                        src="assets/about_story2.jpeg" 
+                                        class="card-img-top" 
+                                        alt="Coffee plants highlighting sustainability efforts"
+                                        />
+                                </a>
+                                
+                                <div class="card-body text-start">
+                                    <h2 class="card-title d-block mb-1">
+                                        Our Commitment to Sustainability
+                                    </h2>
+                                    
+                                    <span class="about-date text-muted d-block mb-2">
+                                        September 6, 2025
+                                    </span>
+                                    
+                                    <p class="card-text">
+                                        Every cup is brewed with care for the planet, from ethical sourcing to eco-conscious choices in the cafe.
+                                    </p>
+                                    
+                                    <a
+                                        href="story_sustainability.html"
+                                        class="btn btn-sm btn-outline-primary"
+                                        >
+                                        Explore our practices
+                                    </a>
+                                </div>
+                            </article>
+                        </div>\
+                        
+                        <!-- Card 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card shadow-sm h-100">
                                 <a href="story_passion.html">
-                                    <img src="assets/about_story3.jpeg" class="card-img-top" alt="Passion for Coffee">
+                                    <img 
+                                        src="assets/about_story3.jpeg" 
+                                        class="card-img-top" alt="Barista pouring latte art symbolizing passion for coffee."
+                                        />
                                 </a>
-                            
+                                
                                 <div class="card-body text-start">
-                                    <strong class="card-title d-block mb-1">The Passion Behind Our Coffee</strong>
-                                
-                                    <span class="about-date text-muted d-block mb-2">September 6, 2025</span>
-                                
+                                    <h2 class="card-title d-block mb-1">
+                                        The Passion Behind Our Coffee
+                                    </h2>
+                                    
+                                    <span class="about-date text-muted d-block mb-2">
+                                        September 6, 2025
+                                    </span>
+                                    
                                     <p class="card-text">
-                                        At Tipsy Bean, coffee is not just a beverage; it's an experience. Each blend is carefully crafted...
+                                        From first roast to final pour, each blend is crafted to create a memorable experience in every sip.
                                     </p>
-                            
+
+                                    <a href="story_passion.html" class="btn btn-sm btn-outline-primary">
+                                        Discover the passion
+                                    </a>
                                 </div>
-                        
-                            </div>
-                    
-                           </div>
-
-                     </div>
-
+                            </article>
+                        </div>
+                    </div>
                 </div>
-        
-             </section>
-
-             <!-- About Team Section -->
-              <section class="about-team py-5 bg-light">
+            </section>
+            
+            <!-- About Team Section -->
+            <section class="about-team py-5 bg-light">
                 <div class="container text-center">
                     <h2 class="mb-3">Meet Our Coffee Enthusiasts</h2>
-                
-                    <p class="about-team-sub mb-4">Passion and Expertise in Every Cup</p>
-                
+                    
+                    <p class="about-team-sub mb-4">
+                        A team dedicated to crafting exceptional coffee experiences.
+                    </p>
+                    
                     <div class="row g-4 justify-content-center">
-                    
                         <!-- Member 1 -->
-                         <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm">
-                                <img src="assets/barista.jpeg" class="card-img-top" alt="John Doe - Head Barista">
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 shadow-sm">
+                                <img 
+                                    src="assets/barista.jpeg" 
+                                    class="card-img-top" 
+                                    alt="Portrait of John Doe, Head Barista"
+                                    />
                                 <div class="card-body text-start">
-                                    <strong class="d-block mb-2">John Doe - Head Barista</strong>
-                                
-                                    <p>With over a decade of experience in the coffee industry, John brings a wealth of knowledge to our team. His expertise in brewing and passion for coffee culture ensures that every cup served meets our high standards.</p>
-                                
-                                    <a class="btn btn-sm btn-outline-primary" href="#">Read More</a>
-                            
+                                    <h3 class="h5 d-block mb-2">
+                                        John Doe - Head Barista
+                                    </h3>
+                                    
+                                    <p>
+                                        With over a decade of experienceJohn leads the bar team and fine-tunes every recipe to hightlight each bean's character.
+                                    </p>
+                                    
+                                    <a href="#" class="btn btn-sm btn-outline-primary">
+                                        Read John's story
+                                    </a>
                                 </div>
+                            </article>
+                        </div>
                         
-                            </div>
-
-                         </div>
-                    
-                         <!-- Member 2 -->
-                          <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm">
-                                <img src="assets/roasting_specialist.png" class="card-img-top" alt="Richard Smith - Roasting Specialist">
+                        <!-- Member 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 shadow-sm">
+                                <img 
+                                    src="assets/roasting_specialist.png" 
+                                    class="card-img-top" 
+                                    alt="Portrait of Richard Smith, Roasting Specialist"
+                                    />
                                 <div class="card-body text-start">
-                                    <strong class="d-block mb-2">Richard Smith - Roasting Specialist</strong>
-                                
-                                    <p>Richard is our roasting maestro, responsible for developing our unique blends. Her meticulous approach and innovative techniques have earned Tipsy Bean a reputation for exceptional flavor profiles.</p>
-                                
-                                    <a class="btn btn-sm btn-outline-primary" href="#">Discover More</a>
-                            
+                                    <h3 class="d-block mb-2">
+                                        Richard Smith - Roasting Specialist
+                                    </h3>
+                                    
+                                    <p>
+                                        Richard develops the signature Tipsy Bean roasts, balancing flavor, aroma, and body through meticulous roasting profiles.
+                                    </p>
+                                    
+                                    <a class="btn btn-sm btn-outline-primary" href="#">
+                                        Discover Richard's craft
+                                    </a>
                                 </div>
+                            </article>
+                        </div>
                         
-                            </div>
-
-                          </div>
-                    
-                          <!-- Member 3 -->
-                           <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm">
-                                <img src="assets/emily.jpeg" class="card-img-top" alt="Emily Brown - Customer Experience Manager">
+                        <!-- Member 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 shadow-sm">
+                                <img 
+                                    src="assets/emily.jpeg" 
+                                    class="card-img-top" 
+                                    alt="Portrait of Emily Brown, Customer Experience Manager"
+                                    />
                                 <div class="card-body text-start">
-                                    <strong class="d-block mb-2">Emily Brown - Customer Experience Manager</strong>
-                                
-                                    <p>Emily is dedicated to creating a warm and inviting atmosphere for our customers. Her passion for service and attention to detail ensure that every visit to Tipsy Bean is memorable.</p>
-                                
-                                    <a class="btn btn-sm btn-outline-primary" href="#">Meet Emily</a>
-                            
+                                    <h3 class="d-block mb-2">
+                                        Emily Brown - Customer Experience Manager
+                                    </h3>
+                                    
+                                    <p>
+                                        Emily focuses on creating a warm, welcoming atmosphere so every guest feels like a regular from their first visit.
+                                    </p>
+                                    
+                                    <a class="btn btn-sm btn-outline-primary" href="#">
+                                        Meet Emily
+                                    </a>
                                 </div>
-                        
-                            </div>
-                    
-                           </div>
-
+                            </article>
+                        </div>
                     </div>
-
                 </div>
-
-              </section>
-
-              <!-- About Values Section -->
-               <section class="about-values py-5">
+            </section>
+            
+            <!-- About Values Section -->
+            <section class="about-values py-5">
                 <div class="container text-center">
-                    <h2 class="mb-3">Our Core Values</h2>
-                
-                    <p class="about-values-sub mb-4">Guiding Principles for Quality and Community</p>
-                
+                    <h2 class="mb-3 section-title">Our Core Values</h2>
+                    
+                    <p class="about-values-sub mb-4">
+                        Principles that guide every bean, brew, and interaction.
+                    </p>
+                    
                     <div class="row g-4 justify-content-center">
                         <!-- Value 1 -->
-                         <div class="col-md-6 col-lg-4">
-                            <div class="card shadow-sm h-100">
-                                <img src="assets/values_quality.jpeg" class="card-img-top" alt="Quality First">
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card shadow-sm h-100">
+                                <img 
+                                    src="assets/values_quality.jpeg" 
+                                    class="card-img-top" 
+                                    alt="Freshly brewed coffee symbolizing quality"
+                                    />
                                 <div class="card-body text-start">
-                                    <strong class="d-block mb-2">Quality First</strong>
-                                
-                                    <p>At Tipsy Bean, quality is at the heart of everything we do. From sourcing the best beans to perfecting our brewing techniques, we are committed to delivering an unparalleled coffee experience.</p>
-                                
-                                    <a class="btn btn-sm btn-outline-primary" href="#">Learn More</a>
-                            
+                                    <h3 class="d-block mb-2">Quality First</h3>
+                                    
+                                    <p>
+                                        From sourcing to brewing, ever step is held to high standards to deliver consistently great coffee.
+                                    </p>
+                                    
+                                    <a class="btn btn-sm btn-outline-primary" href="#">
+                                        Learn about our standards
+                                    </a>
                                 </div>
+                            </article>
+                        </div>
                         
-                            </div>
-
-                         </div>
-                     
-                         <!-- Value 2 -->
-                          <div class="col-md-6 col-lg-4">
-                            <div class="card shadow-sm h-100">
-                                <img src="assets/values_community.jpeg" class="card-img-top" alt="Community Engagement">
+                        <!-- Value 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card shadow-sm h-100">
+                                <img 
+                                    src="assets/values_community.jpeg" 
+                                    class="card-img-top" 
+                                    alt="People enjoying coffee together in a community space"
+                                    />
                                 <div class="card-body text-start">
-                                    <strong class="d-block mb-2">Community Engagement</strong>
-                                
-                                    <p>We believe in the power of community. Tipsy Bean actively participates in local events and initiatives, fostering connections and supporting local artisans to create a vibrant atmosphere for all.</p>
-                                
-                                    <a class="btn btn-sm btn-outline-primary" href="#">Get Involved</a>
-                            
+                                    <h3 class="d-block mb-2">Community Engagement</h3>
+                                    <p>Tipsy Bean supports local artists, events, and initiatives to keep the cafe rooted in its neighborhood.
+                                    </p>
+                                    
+                                    <a class="btn btn-sm btn-outline-primary" href="#">
+                                        Get involved with us
+                                    </a>
                                 </div>
+                            </article>
+                        </div>
                         
-                            </div>
-
-                          </div>
-                      
-                          <!-- Value 3 -->
-                           <div class="col-md-6 col-lg-4">
-                            <div class="card shadow-sm h-100">
-                                <img src="assets/values_sustainability.jpeg" class="card-img-top" alt="Sustainability Matters">
+                        <!-- Value 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card shadow-sm h-100">
+                                <img 
+                                    src="assets/values_sustainability.jpeg" 
+                                    class="card-img-top" 
+                                    alt="Eco-friendly practices hightlighting sustainability"
+                                    />
                                 <div class="card-body text-start">
-                                    <strong class="d-block mb-2">Sustainability Matters</strong>
-                                
-                                    <p>Sustainability is a core value that shapes our practices. We are dedicated to minimizing our environmental impact through responsible sourcing, waste reduction, and promoting eco-friendly habits among our customers.</p>
-                                
-                                    <a class="btn btn-sm btn-outline-primary" href="#">Explore Our Initiatives</a>
-                            
+                                    <h3 class="d-block mb-2">Sustainability Matters</h3>
+                                    
+                                    <p>
+                                        Responsible sourcing, waste reduction, and reusable alternatives help minimize environmental impact.
+                                    </p>
+                                    
+                                    <a class="btn btn-sm btn-outline-primary" href="#">
+                                        Explore Our Initiatives
+                                    </a>
                                 </div>
-                        
-                            </div>
-                    
-                           </div>
-
+                            </article>
+                        </div>
                     </div>
-
                 </div>
-
-               </section>
-
-         </main>
-
-         <!-- Site Footer -->
-         <footer class="site-footer py-3 bg-light text-center text-muted">
+            </section>
+        </main>
+        
+        <!-- Site Footer -->
+        <footer class="site-footer py-3 bg-light text-center text-muted">
             <div class="container">
-                ©2025 - All Rights Reserved.
+                © 2025 Tipsy Bean. All Rights Reserved.
             </div>
+        </footer>
+        
+        <!-- Bootstrap JS bundle with Popper Imatching 5.3.2 CSS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+            ></script>
 
-         </footer>
-
-         <!-- Bootstrap JS bundle with Popper -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+        <!-- Custom JS -->
+        <script src="script.js"></script>
     </body>
-
 </html>
