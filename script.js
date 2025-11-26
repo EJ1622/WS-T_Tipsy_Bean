@@ -1,131 +1,201 @@
-// Custom Carousel Logic
+// ===== Custom front-end interactions for Tipsy Bean =====
 
-// Wait for DOM content to load
+// Run logic once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-  // Select carousel elements
+  // ---------- Custom Carousel Logic ----------
   const slides = document.querySelectorAll('.carousel-slide');
   const dots = document.querySelectorAll('.dot');
   const leftArrow = document.querySelector('.carousel-arrow.left');
   const rightArrow = document.querySelector('.carousel-arrow.right');
-  let current = 0; //Index of current slide
 
-  // Function to reset and show slide based on index
-  function showSlide(index) {
-    if (index < 0) index = slides.length - 1;
-    if (index >= slides.length) index = 0;
-    slides.forEach((slide) => slide.classList.remove('active'));
-    dots.forEach((dot) => dot.classList.remove('active'));
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-    current = index;
-  }
-
-  // Event listeners for arrows
-  leftArrow.addEventListener('click', () => showSlide(current - 1));
-  rightArrow.addEventListener('click', () => showSlide(current + 1));
-
-  // Event listeners for dots
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => showSlide(i));
-  });
-  
-  //Initialize the carousel to first slide
-  showSlide(0);
-});
-
-// Bestseller quantity logic
-
-document.querySelectorAll('.bestseller-item').forEach(function(item) {
-  const btns = item.querySelectorAll('.bestseller-qty-btns button');
-  const qtySpan = item.querySelector('.bestseller-qty-btns span');
-  let qty = 1; // default quantity
-
-  // Decrease quantity
-  btns[0].addEventListener('click', function() {
-    if (qty > 1) {
-      qty--;
-      qtySpan.textContent = qty;
+  if (slides.length > 0 && dots.length > 0 && leftArrow && rightArrow) {
+    let current = 0; //Index of current slide
+    
+    // Show slide by index (with wrap-around)
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      
+      slides.forEach((slide) => slide.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
+      
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      current = index;
     }
-  });
-
-  // Increase quantity
-  btns[1].addEventListener('click', function() {
-    qty++;
-    qtySpan.textContent = qty;
-  });
-});
-
-// Lightgallery initialization for event photo grid
-lightgallery(document.getElementById('lightgallery'), {
-  plugins:[lgZoom],
-  speed: 500,
-  download: false,
-});
-
-//Booking form handler (client-side validation and siple feedback)
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const dateField = document.getElementById('eventDate');
-  const msg = document.getElementById('formMessage');
-  if (!dateField.value) {
-    dateField.classList.add('is-invalid');
-    msg.style.display = 'none';
-  } else {
-    dateField.classList.remove('is-invalid')
-    msg.textContent = 'Thank you! Your reservation is being processed.';
-    msg.style.display = 'block';
-    setTimeout(() => { msg.style.display = 'none'; }, 4000);
-    this.reset();
+    
+    // Arrow controls
+    leftArrow.addEventListener('click', () => showSlide(current - 1));
+    rightArrow.addEventListener('click', () => showSlide(current + 1));
+    
+    // Dot controls
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => showSlide(i));
+    });
+    
+    //Initialize carousel to first slide
+    showSlide(0);
   }
-});
-
-// Subscription form feedback
-document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('subscribeName');
-  const email = document.getElementById('subscribeEmail');
-  const msg = document.getElementById('subscribeMsg');
-  let isValid = true;
   
-  // Simple validation
-  if (!name.value.trim()) { name.classList.add('is-invalid'); isValid = false; }
-  else { name.classList.remove('is-invalid'); }
-  if (!email.value.trim() || !/\S+@\S+\.\S+/.test(email.value)) { email.classList.add('is-invalid'); isValid = false; }
-  else { email.classList.remove('is-invalid'); }
+  // ----------- Bestseller quantity logic ----------
+  // Increment / decrement quantity for each bestseller card
+  document.querySelectorAll('.bestseller-item').forEach(function(item) {
+    const btns = item.querySelectorAll('.bestseller-qty-btns button');
+    const qtySpan = item.querySelector('.bestseller-qty-btns span');
+    if (!btns.length || !qtySpan) return;
+    
+    let qty = 1; // default quantity
+    
+    // Decrease quantity
+    btns[0].addEventListener('click', function() {
+      if (qty > 1) {
+        qty--;
+        qtySpan.textContent = qty;
+      }
+    });
+    
+    // Increase quantity
+    btns[1].addEventListener('click', function() {
+      qty++;
+      qtySpan.textContent = qty;
+    });
+  });
   
-  if (isValid) {
-    msg.textContent = "Thank you for subscribing!";
-    msg.style.display = 'block';
-    this.reset();
-    setTimeout(() => { msg.style.display = 'none'; }, 3500);
-  } else {
-    msg.style.display = 'none';
+  // ---------- Lightgallery initialization ----------
+  // Initialize LightGallery only if elment and library exist
+  const galleryEl = document.getElementById('lightgallery');
+  if (galleryEl && typeof lightGallery === 'funcntion' {
+    lightgGallery(galleryEl, {
+      // Ensure zoom plugin is available before using
+      plugins: typeof lgZoom !== 'undefined' ? [lgZoom] : [],
+      speed: 500,
+      download: false
+    });
   }
-});
 
-// Contact form feedback
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('contactName');
-  const email = document.getElementById('contactEmail');
-  const message = document.getElementById('contactMessage');
-  const msg = document.getElementById('contactMsg');
-  let isValid = true;
-
-  // Simple validation
-  if (!name.value.trim()) { name.classList.add('is-invalid'); isValid = false; }
-  else { name.classList.remove('is-invalid'); }
-  if (!email.value.trim() || !/\S+@\S+\.\S+/.test(email.value)) { email.classList.add('is-invalid'); isValid = false; }
-  else { email.classList.remove('is-invalid'); }
-  if (!message.value.trim()) { message.classList.add('is-invalid'); isValid = false; }
-  else { message.classList.remove('is-invalid'); }
-
-  if (isValid) {
-    msg.textContent = "Thank you for reaching out! We’ll get back to you soon.";
-    msg.style.display = 'block';
-    this.reset();
-    setTimeout(() => { msg.style.display = 'none'; }, 3500);
-  } else {
-    msg.style.display = 'none';
+// ---------- Booking form handler ----------
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const dateField = document.getElementById('eventDate');
+      const msg = document.getElementById('formMessage');
+      if (!dateField || !msg) return;
+      
+      if (!dateField.value) {
+        dateField.classList.add('is-invalid');
+        msg.style.display = 'none';
+      } else {
+        dateField.classList.remove('is-invalid');
+        msg.textContent = 'Thank you! Your reservation is being processed.';
+        msg.classList.add('text-success');
+        msg.style.display = 'block';
+        
+        setTimeout(() => { 
+          msg.style.display = 'none'; 
+        }, 4000);
+        
+        this.reset();
+      }
+    });
+  }
+  
+  // ---------- Subscription form feedback ----------
+  const subscribeForm = document.getElementById('subscribeForm');
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('subscribeName');
+      const email = document.getElementById('subscribeEmail');
+      const msg = document.getElementById('subscribeMsg');
+      if (!name || !email || !msg) return;
+      
+      let isValid = true;
+      
+      // Name validation
+      if (!name.value.trim()) { 
+        name.classList.add('is-invalid'); 
+        isValid = false; 
+      } else {
+        name.classList.remove('is-invalid');
+      }
+      
+      //Email validation (simple pattern
+      if (
+        !email.value.trim() || 
+        !/\S+@\S+\.\S+/.test(email.value)
+      ) { 
+        email.classList.add('is-invalid'); 
+      }
+      
+      if (isValid) {
+        msg.textContent = 'Thank you for subscribing!';
+        msg.classList.remove('text-danger');
+        msg.classList.add('text-success');
+        msg.style.display = 'block'
+          
+        this.reset();
+        
+        setTimeout(() => { 
+          msg.style.display = 'none';
+        }, 3500);
+      } else {
+        msg.style.display = 'none';
+      }
+    });
+  }
+  
+  // ---------- Contact form feedback ----------
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName');
+      const email = document.getElementById('contactEmail');
+      const message = document.getElementById('contactMessage');
+      const msg = document.getElementById('contactMsg');
+      if (!nam || !email || !message || !msg) return;
+      
+      let isValid = true;
+      
+      // Name validation
+      if (!name.value.trim()) { 
+        name.classList.add('is-invalid'); 
+        isValid = false; 
+      } else { 
+        name.classList.remove('is-invalid'); 
+      }
+      
+      // Email Validation
+      if (
+        !email.value.trim() || 
+        !/\S+@\S+\.\S+/.test(email.value)) { 
+        email.classList.add('is-invalid'); isValid = false; 
+      } else { 
+        email.classList.remove('is-invalid'); 
+      }
+      
+      //Message Validation
+      if (!message.value.trim()) { 
+        message.classList.add('is-invalid'); 
+        isValid = false; 
+      } else { 
+        message.classList.remove('is-invalid'); 
+      }
+      
+      if (isValid) {
+        msg.textContent = 
+          "Thank you for reaching out! We’ll get back to you soon.";
+        msg.classList.remove('text-danger');
+        msg.classList.add('text-success');
+        msg.style.display = 'block';
+        
+        this.reset();
+        setTimeout(() => { 
+          msg.style.display = 'none'; }, 3500);
+      } else {
+        msg.style.display = 'none';
+      }
+    });
   }
 });
