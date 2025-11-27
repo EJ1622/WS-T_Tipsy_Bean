@@ -285,7 +285,8 @@ body {
   padding: 3rem 1rem;
   display: flex;
   align-items: center;
-  justify content: center;
+  justify-content: center;
+  color: #fff;
 }
 
 /* Dark overlay to keep text readable */
@@ -300,6 +301,7 @@ body {
 }
 
 .event-hero-content {
+ position: relative;
   max-width: 720px;
   padding: 1.5rem;
   border-radius: 1rem;
