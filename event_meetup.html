@@ -4,84 +4,150 @@
         <meta charset="UTF-8">
         <title>Events | Community Coffee Meet-up</title>
 
-        <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
+        <!-- Responsive viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+            rel="stylesheet"
+            />
+        
+        <!-- Bootstrap CSS -->
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+            />
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css" />
     </head>
-
+    
     <body>
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
             <div class="container-fluid">
+                <!-- Brand links home -->
                 <a class="navbar-brand fw-semibold">Tipsy Bean</a>
-
-                <button class="navbar-toggler" id="btn" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-
+                
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                    >
+                    <span class="navbar-toggler-icon">
+                        <span></span>
+                    </span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto nav-links">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
                         
-                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
                         
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
                         
-                        <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+                        <li class="nav-item">
+                            <a href="events.html" class="nav-link active" aria-current="page"
+                                >Events</a
+                                           >
+                        </li>
                         
-                        <li class="nav-item"><a class="nav-link" href="contacts.html">Contact Us</a></li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Contact Us</a>
+                        </li>
                     </ul>
-
                 </div>
-
             </div>
-
         </nav>
-
-        <header class="event-hero" style="background-image: url('assets/community_meetup.jpeg');">
-            <div class="event-hero-content">
-                <h1>Community Coffee Meet-up</h1>
-
+        
+        <!--  Event hero -->
+        <header 
+            class="event-hero d-flex align-items-center justify-content-center text-light"
+            style="background-image: url('assets/community_meetup.jpeg');"
+            >
+            <div class="event-hero-overlay"></div>
+            
+            <div class="event-hero-content position-relative text-center">
+                <h1 class="mb-0">Community Coffee Meet-up</h1>
             </div>
-
         </header>
-
-        <section class="event-main bg-white rounded shadow-sm my-4 px-3 py-4 mx-auto" style="max-width: 750px;">
-            <div class="event-meta border-bottom pb-2 small text-muted mb-3">
-                November 11, 2025 &bullet; Upcoming Events
-            </div>
-
-            <div class="event-full mb-4">
-                <p>
-                    Join us for our Community Coffee Meet-Up, where coffee lovers can gather to share their passion for all things caffeinated. This informal event encourages networking and connection among fellow coffee aficionados. Enjoy a cup of our finest brews, participate in engaging discussions, and even bring your favorite coffee-related stories or tips to share. Whether you’re a seasoned coffee drinker or just starting your journey, everyone is welcome!
-                </p>
-
-            </div>
-
-            <div class="event-nav-row d-flex justify-content-between border-top pt-3 mt-3">
-                <div class="event-nav-prev text-start">
-                    &lt; Previous <br>
-                    <a href="event_workshop.html" class="text-decoration-underline fw-medium">Barista Skills Workshop</a>
-
+        
+        <main>
+            <section 
+                class="event-main bg-white rounded shadow-sm my-4 px-3 py-4 mx-auto" 
+                style="max-width: 750px;"
+                >
+                <div class="event-meta border-bottom pb-2 small text-muted mb-3">
+                    November 11, 2025 &bullet; Upcoming Events
                 </div>
-
-                <div class="event-nav-next text-end">
-                    Next &gt; <br>
-                    <a href="event_extravaganza.html" class="text-decoration-underline fw-medium">Coffee Tasting Extravaganza</a>
-
+                
+                <article class="event-full mb-4">
+                    <p>
+                        Join us for our Community Coffee Meet-Up, where coffee lovers can gather to share their passion for all things caffeinated. This informal event encourages networking and connection among fellow coffee aficionados. Enjoy a cup of our finest brews, participate in engaging discussions, and even bring your favorite coffee-related stories or tips to share. Whether you’re a seasoned coffee drinker or just starting your journey, everyone is welcome!
+                    </p>
+                    <p>
+                        Enjoy a cup of our finest brews, participate in engaging discussions, and even bring your favorite coffee-related stories or tips to share. Whether you're a seasoned coffee drinker or just starting your journey, everyone is welcome!
+                    </p>
+                </article>
+                
+                <div 
+                    class="event-nav-row d-flex justify-content-between border-top pt-3 mt-3"
+                    >
+                    <div class="event-nav-prev text-start">
+                        <span class="d-blick small text-muted">&lt; Previous</span>
+                        <a 
+                            href="event_workshop.html" 
+                            class="text-decoration-underline fw-medium"
+                            >Barista Skills Workshop</a
+                                                        >
+                    </div>
+                    
+                    <div class="event-nav-next text-md-end text-start">
+                        <span class="d-block small text-muted">Next &gt;</span>
+                        <a 
+                            href="event_extravaganza.html" 
+                            class="text-decoration-underline fw-medium"
+                            >Coffee Tasting Extravaganza</a
+                                                            >
+                    </div>
                 </div>
-
+                
+                <div class="event-return mt-3">
+                    &lt; <a href="events.html" class="text-decoration-underline">Return to Site</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer
+            class="site-footer py-3 bg-body-tertiary text-center text-muted small"
+            >
+            <div class="footer-content">
+                © 2025 Tipsy Bean. All Rights Reserved.
             </div>
+        </footer>
+        
+        <!-- Bootstrap JS bundle (with Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+            ></script>
 
-            <div class="event-return mt-3">
-                &lt; <a href="events.html" class="text-decoration-underline">Return to Site</a>
-            </div>
-
-        </section>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-
+        <!-- Custom script -->
+        <script src="script.js"></script>
     </body>
-    
 </html>
