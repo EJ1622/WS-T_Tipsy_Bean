@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Show slide by index (with wrap-around)
     function showSlide(index) {
       if (index < 0) index = slides.length - 1;
-      if (index >= slides.length) index = 0;
+      else if (index >= slides.length) index = 0;
       
       slides.forEach((slide) => slide.classList.remove('active'));
       dots.forEach((dot) => dot.classList.remove('active'));
