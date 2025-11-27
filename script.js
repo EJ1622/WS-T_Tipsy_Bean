@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // ---------- Lightgallery initialization ----------
   // Initialize LightGallery only if elment and library exist
   const galleryEl = document.getElementById('lightgallery');
-  if (galleryEl && typeof lightGallery === 'funcntion' {
-    lightgGallery(galleryEl, {
+  if (galleryEl && typeof lightGallery === 'function' {
+    lightGallery(galleryEl, {
       // Ensure zoom plugin is available before using
       plugins: typeof lgZoom !== 'undefined' ? [lgZoom] : [],
       speed: 500,
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ---------- Booking form handler ----------
   const bookingForm = document.getElementById('bookingForm');
-  if (bookingForm {
+  if (bookingForm) {
     bookingForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const dateField = document.getElementById('eventDate');
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const email = document.getElementById('contactEmail');
       const message = document.getElementById('contactMessage');
       const msg = document.getElementById('contactMsg');
-      if (!nam || !email || !message || !msg) return;
+      if (!name || !email || !message || !msg) return;
       
       let isValid = true;
       
