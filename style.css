@@ -251,19 +251,6 @@ body {
   max-width: 420px;
 }
 
-/* ===== Form feedback ===== */
-
-.is-invalid {
-  border-color: #dc3545 !important;
-}
-
-#subscribeMsg,
-#contactMsg,
-#formMessage {
-  display: none;
-  font-size: 0.9rem;
-}
-
 /* Small screen tweak */
 @media (max-width: 576px) {
   .contact-hero {
@@ -312,6 +299,7 @@ body {
 .event-hero-kicker {
   letter-spacing: 0.12rem;
   opacity: 0.85;
+ font-weight: 500;
 }
 
 .event-hero-title {
@@ -321,12 +309,30 @@ body {
 .event-hero-sub {
   font-size: 0.98rem;
   opacity: 0.9;
+ max-width: 500px;
+ margin: 0 auto;
+}
+
+/* Event navigation */
+.event-nav-row {
+ font-size: 0.9rem;
+}
+
+.event-nav-prev a,
+.event-nav-next a {
+ font-size: 1rem;
+ color: #6f4e37;
 }
 
 /* ===== Event body ===== */
 
 .event-main {
   background-color: #ffffff;
+}
+
+/* Event metadata polish */
+.event-meta {
+ font-size: 0.85rem;
 }
 
 .event-full p {
@@ -344,6 +350,10 @@ body {
   .event-hero-content {
     padding: 1.25rem;
   }
+}
+
+.text-success {
+ color: #198754 !important;
 }
 
 /* Hero background and overlay */
