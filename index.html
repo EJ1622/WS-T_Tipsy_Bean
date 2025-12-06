@@ -2,305 +2,383 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!-- For responsive scaling on all devices -->
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Home | Tipsy Bean</title>
-
-     <!-- Bootstrap CSS from CDN -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-      <!-- Google Fonts (Montserrat)-->
-       <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
-       <!-- Custom CSS -->
-        <link rel="stylesheet" href="style.css">
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Tipsy Bean</title>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link 
+      rel="preconnect" href="https://fonts.googleapis.com">
+    <link 
+      rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+      rel="stylesheet"
+      />
+    
+    <!-- Bootstrap CSS -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+      />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-
+  
   <body>
-    <!-- Main navigation bar -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand fw-semibold" href="index.html">Tipsy Bean</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+          >
           <span class="navbar-toggler-icon"></span>
-
         </button>
         
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-links">
-            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-
-            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-
-            <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-
-            <li class="nav-item"><a href="contacts.html" class="nav-link">Contact Us</a></li>
-
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active" aria-current="page"
+                >Home</a
+                       >
+            </li>
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="events.html" class="nav-link">Events</a>
+            </li>            <li class="nav-item">
+              <a href="contacts.html" class="nav-link">Contact Us</a>
+            </li>
           </ul>
-        
         </div>
-      
       </div>
-    
     </nav>
-
+    
     <!-- Hero section -->
-     <section class="hero d-flex align-items-center" role="banner" aria-label="Welcome Banner with call to action">
+    <section 
+      class="hero d-flex align-items-center text-center text-white" 
+      role="banner" 
+      aria-label="Welcome to Tipsy Bean"
+      >
       <div class="container hero-content">
-        <h1>WELCOME TO<br>TIPSY BEAN</h1>
-
-        <a href="#" class="shop-btn">Shop Now</a>
-
+        <h1 class="display-4 fw-bold mb-4"
+          >WELCOME TO<br />
+          <span class="hero-highlight">TIPSY BEAN</span>
+        </h1>
+        <a href="menu.html" class="shop-btn btn btn-lg btn-light shadow-lg">
+          Explore Menu
+        </a>
       </div>
-
     </section>
-
-    <!-- Carousel Section -->
-    <section class="carousel-section my-5" aria-label="Featured Products Carousel">
+    
+    <!-- Featured carousel -->
+    <section class="carousel-section my-5" aria-label="Featured offerings">
       <div class="container position-relative">
-        <!-- Carousel navigation buttons -->
-        <button class="carousel-arrow left btn btn-light rounded-circle shadow-sm" aria-label="Previous Slide">&#10094;</button>
+        <!-- Navigation arrows -->
+        <button 
+          class="carousel-arrow left btn btn-light rounded-circle shadow-sm position-absolute" 
+          aria-label="Previous Slide"
+          style="left: -50px; top: 50%; transform: translateY(-50%); z-index="10;"
+          >
+          &#10094;
+        </button>
         
-        <div class="carousel-slides position-relative">
-          <!-- Each slide does NOT all have active class -->
-           <!-- First Slide -->
-            <div class="carousel-slide active d-flex flex-column align-items-center" role="group" aria-roledescription="slide" aria-label="Artisan Coffee Blends">
-              <img src="assets/product_img.jpeg" alt="Artisan Coffee Blends" class="carousel-img mb-3" />
-              <div class="carousel-content">
-                <h2>Artisan Coffee Blends</h2>
-                
-                <p>Discover our carefully curated selection of artisan coffee blends, sourced from the best coffee-growing regions in the world. Each cup is a journey of flavor, designed to awaken your senses.</p>
-                
-                <a href="#" class=" btn carousel-btn">Learn More</a>
-
-              </div>
-
-            </div>
-
-          <!-- Second Slide -->
-           <div class="carousel-slide active flex-column align-items-center" role="group" aria-roledescription="slide" aria-label="Freshly Baked Pastries">
-            <img src="assets/pastry_img.jpeg" alt="Freshly Baked Pastries" class="carousel-img mb-3" />
-            <div class="carousel-content">
-              <h2>Freshly Baked Pastries</h2>
-
-              <p>
-                Indulge in our selection of freshly baked pastries, made with love and the finest ingredients.<br>
-                Perfectly paired with your favorite coffee, they are a delightful treat for any occasion.
+        <div class="carousel-slides">
+          <!-- Slide 1: Artisan Coffee -->
+          <div 
+            class="carousel-slide active d-flex flex-column align-items-center text-center" 
+            role="group" 
+            aria-roledescription="slide" 
+            aria-label="Artisan Coffee Blends"
+            >
+            <img 
+              src="assets/product_img.jpeg" 
+              alt="Artisan coffee blends from around the world" 
+              class="carousel-img img-fluid rounded shadow-lg mb-4" 
+              />
+            <div class="carousel-content px-3">
+              <h2 class="h3 fw-bold mb-3">Artisan Coffee Blends</h2>
+              <p class="lead mb-4">
+                Carefully curated from the world's best coffee regions. Each cup awakens your sense with unique flavor journeys.
               </p>
-
-              <a href="menu.html" class="btn carousel-btn">See Menu</a>
-
+              <a href="menu.html" class="btn btn-warning btn-lg shadow">
+                Learn More
+              </a>
             </div>
-
           </div>
-
-          <!-- Third Slide -->
-           <div class="carousel-slide active flex-column align-items-center" role="group" aria-roledescription="slide" aria-label="Cozy Atmosphere">
-            <img src="assets/cozy_img.jpeg" alt="Cozy Atmosphere" class="carousel-img mb-3" />
-            <div class="carousel-content">
-              <h2>Cozy Atmosphere</h2>
-
-              <p>
-                Enjoy your favorite beverage in our cozy and inviting atmosphere, designed for relaxation and connection. Whether you're working or catching up with friends, Tipsy Bean is your perfect retreat.
+          
+          <!-- Slide 2: Pastries -->
+          <div 
+            class="carousel-slide d-flex flex-column align-items-center text-center" 
+            role="group" 
+            aria-roledescription="slide"
+            aria-label="Freshly Baked Pastries"
+            >
+            <img 
+              src="assets/pastry_img.jpeg" 
+              alt="Freshly baked pastries" 
+              class="carousel-img img-fluid rounded shadow-lg mb-4"
+              />
+            <div class="carousel-content px-3">
+              <h2 class="h3 fw-bold mb-3">Freshly Baked Pastries</h2>
+              <p class="lead mb-4">
+                Made with love and finest ingredients. Perfect companions for your favorite coffee.
               </p>
-
-              <a href="#" class="btn carousel-btn">Visit Us</a>
-
+              <a href="menu.html" class="btn btn-warning btn-lg shadow"
+                >See Menu
+              </a>
             </div>
-
           </div>
-
+          
+          <!-- Slide 3: Atmosphere -->
+          <div 
+            class="carousel-slide d-flex flex-column align-items-center text-center" 
+            role="group" 
+            aria-roledescription="slide" 
+            aria-label="Cozy Atmosphere"
+            >
+            <img 
+              src="assets/cozy_img.jpeg" 
+              alt="Cozy atmosphere at Tipsy Bean" 
+              class="carousel-img img-fluid rounded shadow-lg mb-4" 
+              />
+            <div class="carousel-content px-3">
+              <h2 class="h3 fw-bold mb-3">Cozy Atmosphere</h2>
+              <p class="lead mb-4">
+                Designed for relaxation and connection. Your perfect retreat for work or friends.
+              </p>
+              <a href="contacts.html" class="btn btn-warning btn-lg shadow">
+                Visit Us
+              </a>
+            </div>
+          </div>
         </div>
-
-        <button class="carousel-arrow right btn btn-light rounded-circle shadow-sm" aria-label="Next Slide">&#10095;</button>
-
-        <!-- Carousel Navigation dots -->
-         <div class="carousel-dots text-center mt-3" role="tablist">
-          <span class="dot active" role="tab" aria-selected="true" aria-controls="slide1" tabindex="0"></span>
-
-          <span class="dot" role="tab" aria-selected="false" aria-controls="slide2" tabindex="-1"></span>
-
-          <span class="dot" role="tab" aria-selected="false" aria-controls="slide3" tabindex="-1"></span>
-
-        </div>
-
-      </div>
-      
-    </section>
-
-    <section class="bestsellers">
-      <div class="container">
-        <h2>Our Best Sellers</h2>
         
-        <p class="bestsellers-subheading">Experience the favorites that keep our customers coming back for more.</p>
+        <button 
+          class="carousel-arrow right btn btn-light rounded-circle shadow-sm position-absolute"
+          aria-label="Next Slide"
+          style="right: -50px; top: 50%; transform: translateY(-50%); z-index: 10;"
+          >
+          &#10095;
+        </button>
         
-        <div class="bestseller-list row justify-content-center">
-          <!-- 1st item -->
-           <div class="bestseller-item d-flex flex-column flex-md-row">
-            <img src="assets/hazelnut_latte.jpeg" alt="Hazelnut Latte">
-            <div class="bestseller-info">
-              <div class="bestseller-title-price d-flex justify-content-between">
-                <span class="bestseller-title">Hazelnut Latte</span>
-
-                <span class="bestseller-price">Php294.03</span>
-
-              </div>
-
-              <p class="bestseller-desc">Our Hazelnut Latte blends smooth espresso with creamy steamed milk and a touch of hazelnut syrup, creating a luxurious drink that is both comforting and indulgent.</p>
-
-              <div class="bestseller-qty d-flex align-items-center">
-                <span>Quantity</span>
-
-                <div class="bestseller-qty-btns d-flex align-items-center ms-2">
-                  <button type="button">-</button>
-
-                  <span>1</span>
-
-                  <button type="button">+</button>
-
-                </div>
-
-              </div>
-
-              <button class="bestseller-order-btn btn btn-secondary mt-2" disabled>Coming soon</button>
-
-            </div>
-
-          </div>
-
-          <!-- 2nd item -->
-           <div class="bestseller-item d-flex flex-column flex-md-row">
-            <img src="assets/vanilla_croissant.jpeg" alt="Vanilla Almond Croissant">
-            <div class="bestseller-info">
-              <div class="bestseller-title-price d-flex justify-content-between">
-                <span class="bestseller-title">Vanilla Almond Croissant</span>
-
-                <span class="bestseller-price">Php235.22</span>
-
-              </div>
-
-              <p class="bestseller-desc">This flaky and buttery croissant is filled with creamy almond paste and a hint of vanilla, making it a perfect companion to your morning coffee or an afternoon treat.</p>
-
-              <div class="bestseller-qty d-flex align-items-center">
-                <span>Quantity</span>
-
-                <div class="bestseller-qty-btns d-flex align-items-center ms-2">
-                  <button type="button">-</button>
-
-                  <span>1</span>
-
-                  <button type="button">+</button>
-
-                </div>
-
-              </div>
-
-              <button class="bestseller-order-btn btn btn-secondary mt-2" disabled>Coming soon</button>
-
-            </div>
-          </div>
-
-          <!-- 3rd item -->
-           <div class="bestseller-item d-flex flex-column flex-md-row">
-            <img src="assets/classic_espresso.jpeg" alt="Classic Espresso">
-            <div class="bestseller-info">
-              <div class="bestseller-title-price d-flex justify-content-between">
-                <span class="bestseller-title">Classic Espresso</span>
-
-                <span class="bestseller-price">Php176.42</span>
-
-              </div>
-
-              <p class="bestseller-desc">Our Classic Espresso is a rich and bold blend that delivers a perfect shot every time. Ideal for those who appreciate the true essence of coffee, it’s a must-try for any coffee lover.</p>
-
-              <div class="bestseller-qty d-flex align-items-center">
-                <span>Quantity</span>
-
-                <div class="bestseller-qty-btns d-flex align-items-center ms-2">
-                  <button type="button">-</button>
-
-                  <span>1</span>
-
-                  <button type="button">+</button>
-
-                </div>
-
-              </div>
-
-              <button class="bestseller-order-btn btn btn-secondary mt-2" disabled>Coming soon</button>
-
-            </div>
-
-          </div>
-
+        <!-- Dots navigation -->
+        <div 
+          class="carousel-dots text-center mt-4" 
+          role="tablist"
+          aria-label="Slide indicators"
+          >
+          <span 
+            class="dot active mx-1" 
+            role="tab" 
+            aria-selected="true" 
+            tabindex="0"
+            ></span>
+          <span class="dot mx-1" role="tab" aria-selected="false" tabindex="-1"></span>
+          <span class="dot mx-1" role="tab" aria-selected="false" tabindex="-1"></span>
         </div>
-
       </div>
-
     </section>
-
-    <section class="community">
+    
+    <!-- Bestsellers -->
+    <section class="bestsellers py-5 bg-light">
       <div class="container">
-        <h2>Join Our Community</h2>
-
-        <p class="community-subheading">
-          Stay connected with our upcoming events and workshops, designed for coffee enthusiasts and community lovers alike.
-        </p>
-
-        <div class="community-events row justify-content-center">
-          <!-- Event 1 -->
-           <div class="community-event col-md-4">
-            <img src="assets/tasting_workshop.jpeg" alt="Coffee Tasting Workshop">
-            <div class="event-title">Coffee Tasting Workshop</div>
-
-            <p class="event-desc">
-              Join us for an immersive coffee tasting workshop where you will learn about different coffee varieties and brewing techniques. A perfect opportunity to enhance your coffee knowledge.
-            </p>
-
-          </div>
-
-          <!-- Event 2 -->
-           <div class="community-event col-md-4">
-            <img src="assets/live_music.jpeg" alt="Live Music Evenings">
-            <div class="event-title">Live Music Evenings</div>
-
-            <p class="event-desc">
-              Enjoy live music every Friday evening at Tipsy Bean. Join us for a night of great coffee, delicious pastries, and local talent.
-            </p>
-
-          </div>
-
-          <!-- Event 3 -->
-           <div class="community-event col-md-4">
-            <img src="assets/art_night.jpeg" alt="Community Art Night">
-            <div class="event-title">Community Art Night</div>
-
-            <p class="event-desc">
-              Unleash your creativity at our Community Art Night! Bring your supplies and join fellow art lovers for a relaxing evening filled with inspiration and coffee.
-            </p>
-
-          </div>
-
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5 mb-3">Our Best Sellers</h2>
+          <p class="bestsellers-subheading lead">
+            Favorites that keep customers coming back for more.
+          </p>
         </div>
-
+        
+        <div class="row g-4 justify-content-center bestseller-list">
+          <!-- Hazelnut Latte -->
+          <div class="col-lg-4 col-md-6">
+            <article class="bestseller-item h-100 card shadow-sm">
+              <img 
+                src="assets/hazelnut_latte.jpeg" 
+                alt="Hazelnut Latte"
+                class="card-img-top img-fluid"
+                />
+              <div class="card-body bestseller-info">
+                <div class="bestseller-title-price d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="bestseller-title card-title mb-0">Hazelnut Latte</h5>
+                  <span class="bestseller-price fw-bold text-warning fs-5">Php294.03</span>
+                </div>
+                <p class="bestseller-desc card-text mb-3">
+                  Smooth espresso with creamy milk and hazelnut syrup—a luxurious comforting indulgence.
+                </p>
+                <div class="bestseller-qty d-flex align-items-center mb-3">
+                  <span class="me-3 fw-medium">Quantity:</span>
+                  <div class="bestseller-qty-btns d-flex align-items-center border rounded px-2 py-1">
+                    <button type="button" class="btn btn-sm">-</button>
+                    <span class="qty mx-2">1</span>
+                    <button type="button" class="btn btn-sm">+</button>
+                  </div>
+                </div>
+                <button class="bestseller-order-btn btn btn-warning w-100" disabled>
+                  Coming soon
+                </button>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Vanilla Almond Croissant -->
+          <div class="col-lg-4 col-md-6">
+            <artcile class="bestseller-item h-100 card shadow-sm">
+              <img 
+                src="assets/vanilla_croissant.jpeg" 
+                alt="Vanilla Almond Croissant"
+                class="card-img-top img-fluid"
+                />
+              <div class="card-body bestseller-info">
+                <div class="bestseller-title-price d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="bestseller-title card-title mb-0">Vanilla Almond Croissant</h5>
+                  <span class="bestseller-price fw-bold text-warning fs-5">Php235.22</span>
+                </div>
+                <p class="bestseller-desc card-text mb-3">
+                  Flaky buttery croissant with creamy almond paste and vanilla notes.
+                </p>
+                <div class="bestseller-qty d-flex align-items-center mb-3">
+                  <span class="me-3">Quantity:</span>
+                  <div class="bestseller-qty-btns d-flex align-items-center border rounded px-2 py-1">
+                    <button type="button" class="btn btn-sm">-</button>
+                    <span class="qty mx-2 fw-bold">1</span>
+                    <button type="button" class="btn btn-sm">+</button>
+                  </div>
+                </div>
+                <button class="bestseller-order-btn btn btn-warning w-100" disabled>
+                  Coming soon
+                </button>
+              </div>
+            </artcile>
+          </div>
+          
+          <!-- Classic Espresso -->
+          <div class="col-lg-4 col-md-6">
+            <article class="bestseller-item h-100 card shadow-sm">
+              <img 
+                src="assets/classic_espresso.jpeg" 
+                alt="Classic Espresso"
+                class="card-img-top img-fluid"
+                />
+              <div class="card-body bestseller-info">
+                <div class="bestseller-title-price d-flex justify-content-between align-items-center mb-2">
+                  <h5 class="bestseller-title card-title fw-bold text-warning fs-5">Classic Espresso</h5>
+                  <span class="bestseller-price fw-bold text-warning fs-5">Php176.42</span>
+                </div>
+                <p class="bestseller-desc card-text mb-3">
+                  Rich bold blend delivering perfect shots every time.
+                </p>
+                <div class="bestseller-qty d-flex align-items-center mb-3">
+                  <span class="me-3 fw-medium">Quantity:</span>
+                  <div class="bestseller-qty-btns d-flex align-items-center border rounded px-2 py-1">
+                    <button type="button" class="btn btn-sm">-</button>
+                    <span class="qty mx-2 fw-bold">1</span>
+                    <button type="button" class="btn btn-sm">+</button>
+                  </div>
+                </div>
+                <button class="bestseller-order-btn btn btn-warning w-100" disabled>
+                  Coming soon
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
-
     </section>
-
-    <footer class="site-footer">
-      <div class="footer-content">
-        ©2025 – All Rights Reserved.
+    
+    <!-- Community events teaser -->
+    <section class="community py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5 mb-3">Join Our Community</h2>
+          <p class="lead">
+            Stay connected with upcoming events for coffee lovers.
+          </p>
+        </div>
+        
+        <div class="row g-4 community-events justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <article class="community-event text-center h-100">
+              <div class="position-relative mb-3">
+                <img 
+                  src="assets/tasting_workshop.jpeg" 
+                  alt="Coffee Tasting Workshop"
+                  class="img-fluid rounded shadow-lg"
+                  />
+              </div>
+              <h4 class="fw-bold mb-3">Coffee Tasting Workshop</h4>
+              <p>
+                Learn about coffee varieties and brewing techniques in an immersive session.
+              </p>
+              <a href="events.html" class="btn btn-outline-warning">Details</a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <article class="community-event text-center h-100">
+              <div class="position-relative mb-3">
+                <img 
+                  src="assets/live_music.jpeg" 
+                  alt="Live Music Evenings"
+                  class="img-fluid rounded shadow-lg"
+                  />
+              </div>
+              <h4 class="fw-bold mb-3">Live Music Evenings</h4>
+              <p>Friday nights with coffee, pastries, and local talent.</p>
+              <a href="events.html" class="btn btn-outline-warning">Details</a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <article class="community-event text-center h-100">
+              <div class="position-relative mb-3">
+                <img 
+                  src="assets/art_night.jpeg" 
+                  alt="Community Art Night"
+                  class="img-fluid rounded shadow-lg"
+                  />
+              </div>
+              <h4 class="fw-bold mb-3">Community Art Night</h4>
+              <p>Creative evening with art supplied, coffee, and inspiration.</p>
+              <a href="events.html" class=btn btn-outline-warning">Details</a>
+            </article>
+          </div>
+        </div>
       </div>
-
+    </section>
+    
+    <!-- Footer -->
+    <footer class="site-footer py-4 bg-dark text-white text-center">
+      <div class="container">
+        <div class="footer-content">
+          © 2025 Tipsy Bean. All Rights Reserved.
+        </div>
+      </div>
     </footer>
-
-    <!-- Bootsrtrap JS (bundle includes Popper)-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom Carousel JS -->
-     <script src="script.js"></script>
-
+    
+    <!-- Bootsrtrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      ></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
   </body>
-
 </html>
