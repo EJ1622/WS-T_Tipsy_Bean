@@ -423,6 +423,7 @@ body {
 .carousel-slides {
  height: 500px;
  overflow: hidden;
+ position: relative;
 }
 
 .carousel-slide {
