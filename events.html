@@ -2,300 +2,178 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Tipsy Bean | Events</title>
-
-    <!-- Responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EJR's Coffee | Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
-      rel="stylesheet"
-      />
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS-->
-    <link 
-      rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous">
-    
-    <!-- Lightgallery CSS -->
-    <link 
-      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css"
-      />
-    
-    <!-- Custom Styles -->
-       <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+     <!-- Lightgallery CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css"/>
+
+      <!-- Custom Styles -->
+       <link rel="stylesheet" href="style.css">
   </head>
-  
+
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
+     <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand fw-semibold" href="index.html">Tipsy Bean</a>
-        
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation"
-          >
-          <span class="navbar-toggler-icon">
-            <span></span>
-          </span>
+        <a class="navbar-brand fw-semibold" href="index.html">EJR's Coffee</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-links">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="menu.html">Menu</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            
-            <li class="nav-item">
-              <a 
-                href="events.html" 
-                class="nav-link active"
-                aria-current="page"
-                >
-                Events
-              </a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Contact Us</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    
-    <!-- Upcoming events cards -->
-    <section class="events py-5 bg-white text-center">
+
+    <!-- Events Hero -->
+     <section class="events-hero text-white text-center py-5">
       <div class="container">
-        <h1 class="fw-bold mb-2">Exciting Events Coming Up!</h1>
-        
-        <p class="events-sub mb-4">
-          Join us for engaging activities centered around great coffee and community.
-        </p>
-        
-        <div class="row justify-content-center g-4">
-          <!-- Event 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="event-card shadow-sm h-100 bg-white rounded-3">
-              <a href="event_workshop.html" class="d-block">
-                <img 
-                  src="assets/barista_workshop.png" 
-                  alt="Barista Skills Workshop at Tipsy Bean" 
-                  class="img-fluid rounded top"
-                  />
-              </a>
-              
-              <div class="event-info py-3">
-                <strong class="d-block mb-1">Barista Skills Workshop</strong>
-                <p class="mb-0 text-muted small">November 11, 2025</p>              
-              </div>
-            </article>
-          </div>
-          
-          <!-- Event 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="event-card shadow-sm h-100 bg-white rounded-3">
-              <a href="event_meetup.html" class="d-block">
-                <img 
-                  src="assets/community_meetup.jpeg" 
-                  alt="Community Coffee Meet-Up at Tipsy Bean" 
-                  class="img-fluid rounded-top"
-                  />
-              </a>
-              
-              <div class="event-info py-3">
-                <strong class="d-block mb-1">Community Coffee Meet-Up</strong>               
-                <p class="mb-0 text-muted small">November 11, 2025</p>
-              </div>
-            </article>
-          </div>
-          
-          <!-- Event 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="event-card shadow-sm h-100 bg-white rounded-3">
-              <a href="event_extravaganza.html" xlass="d-block">
-                <img 
-                  src="assets/tasting_extravaganza.jpeg" 
-                  alt="Coffee Tasting Extravaganza at Tipsy Bean" 
-                  class="img-fluid rounded-top"
-                  />
-              </a>
-              
-              <div class="event-info py-3">
-                <strong cclass="d-block mb-1">Coffee Tasting Extravaganza</strong>
-                <p class="mb-0 text-muted small">November 11, 2025</p>
-              </div>
-            </article>
-          </div>
-        </div>
+        <h1 class="display-3 fw-bold mb-4">Upcoming Events</h1>
+        <p class="lead fs-2">Join coffee community.</p>
       </div>
     </section>
-    
-    <!-- Booking section -->
-    <section class="event-booking py-5">
-      <div class="container text-center">
-        <h2 class="fw-bold mb-3">Reserve Your Spot Today!</h2>
-        
-        <p class="event-booking-sub mb-4">
-          Choose your date and confirm your reservation in just a few steps.
-        </p>
-        
-        <div 
-          class="event-booking-img-wrap mb-4 mx-auto shadow-sm rounded-4 overflow-hidden" 
-          style="max-width: 860px;"
-          />
-        </div>
-        
-        <div
-          class="event-booking-details bg-white mx-auto p-4 mb-4 rounded-3 shadow-sm text-start"
-          style="max-width: 620px;"
-          >
-          <h3 class="mb-2 text-center"> Online Booking System</h3>
-          
-          <blockquote class="blockquote mb-3 px-3 border-start border-3 border-warning">
-            Our online booking makes it easy to secure your spot for upcoming events and workshops. Select your preferred date and time, submit the form, and watch for a confirmation email.
-          </blockquote>
-          
-          <!-- Booking Form -->
-          <form class="booking-form" id="bookingForm" novalidate>
-            <label class="form-label small" for="eventDate">
-              Choose your preferred date and time
-            </label>
-            <input 
-              id="eventDate" 
-              type="datetime-local" 
-              class="form-control mb-2"
-              required
-              />
-            
-            <div class="booking-tz mb-2 small text-muted">
-              Event time zone: Asia/Shanghai (GMT+08:00)
+
+    <!-- Event Grid -->
+     <section class="events-grid py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Event 1: Workshop -->
+           <div class="col-md-6 col-lg-4">
+            <div class="event-card h-100 card shadow-lg border-0 overflow-hidden position-relative">
+              <div class="event-badge position-absolute top-0 end-0 overflow-hidden position-relative">
+                <span class="badge bg-warning text-dark px-3 py-2 fs-6 fw-bold">WORKSHOP</span>
+              </div>
+              <img src="assets/barista_workshop.png" class="card-img-top" alt="Barista Workshop" style="height: 280px; object-fit: cover;">
+              <div class="card-body p-4">
+                <h3 class="card-title fw-bold mb-2 text-warning">Barista Skills Workshop</h3>
+                <p class="text-muted small mb-2">November 15, 2026 - 6:00 PM</p>
+                <p class="card-text mb-3">Master espresso, latte art & professional brewing techniques.</p>
+                <a href="event_workshop.html" class="btn btn-outline-warning w-100">Learn More</a>
+              </div>
             </div>
-            
-            <button type="submit" class="booking-btn btn btn-dark w-100">
-              Book Now
-            </button>
-            
-            <div 
-              id="formMessage" 
-              class="text-success mt-2" 
-              style="display: none;"
-              ></div>
-          </form>
+          </div>
+
+          <!-- Event 2: Meetup -->
+           <div class="col-md-6 col-lg-4">
+            <div class="event-card h-100 card shadow-lg border-0 overflow-hidden position-relative">
+              <div class="event-badge position-absolute top-0 end-0 m-3">
+                <span class="badge bg-success text-white px-3 py-2 fs-6 fw-bold">MEETUP</span>
+              </div>
+              <img src="assets/community_meetup.jpeg" alt="Community MeetUp" class="card-img-top" style="height: 280px; object-fit: cover;">
+              <div class="card-body p-4">
+                <h3 class="card-title fw-bold mb-2 text-warning">Community Coffee MeetUp</h3>               
+                <p class="text-muted small mb-2">November 18, 2026 - 7:00 PM</p>
+                <p class="card-text mb-3">Connect with fellow coffee lovers and share your passion.</p>
+                <a href="event_meetup.html" class="btn btn-outline-warning w-100">Join Us</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: Extravaganza -->
+           <div class="col-md-6 col-lg-4">
+            <div class="event-card h-100 card shadow-lg border-0 overflow-hidden position-relative">
+              <div class="event-badge position-absolute top-0 end-0 m-3">
+                <span class="badge bg-danger text-white px-3 py-2 fs-6 fw-bold">EXTRAVAGANZA</span>
+              </div>
+              <img src="assets/tasting_extravaganza.jpeg" alt="Tasting Event" class="card-img-top" style="height: 280px; object-fit: cover;">
+              <div class="card-body p-4">
+                <h3 class="card-title fw-bold mb-2 text-warning">Coffee Tasting Extravaganza</h3>
+                <p class="text-muted small mb-2">November 22, 2026 - 8:00 PM</p>
+                <p class="card-text mb-3">Premium single-origin tasting with expert guidance.</p>
+                <a href="event_extravaganza.html" class="btn btn-outline-warning w-100">Reserve Spot</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    
-    <!-- Photo Gallery -->
-    <section class="event-gallery py-5 bg-white text-center">
+
+    <!-- Booking section -->
+     <section class="booking-section py-5">
       <div class="container">
-        <h2 class="fw-bold mb-2">Memorable Moments</h2>
-        
-        <p class="event-gallery-sub mb-4">
-          A glimpse of the energy and community at our past events.
-        </p>
-        
-        <!-- lightGallery container -->
-        <div 
-          id="lightGallery"
-          class="row g-2 justify-content-center"
-          aria-label="Event photo gallery"
-          >
-          <div class="col-12 col-md-6 col-lg-3">
-            <a 
-              href="assets/gallery1.jpeg" 
-              class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3"
-              data-lg-size="1200-800"
-              >
-              <img 
-                src="assets/gallery1.jpeg" 
-                alt="Guests enjoying coffee together" 
-                class="img-fluid"
-                />
-            </a>
-          </div>
-          
-          <div class="col-12 col-md-6 col-lg-3">
-            <a 
-              href="assets/gallery2.jpeg" 
-              class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3"
-              data-lg-size="1200-800"
-              >
-              <img 
-                src="assets/gallery2.jpeg" 
-                alt="Barista preparing drinks during an event" 
-                class="img-fluid"
-                />
-            </a>
-          </div>
-          
-          <div class="col-12 col-md-6 col-lg-3">
-            <a 
-              href="assets/gallery3.jpeg" 
-              class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3"
-              data-lg-size="1200-800"
-              >
-              <img 
-                src="assets/gallery3.jpeg" 
-                alt="Guests sampling different coffee blends" 
-                class="img-fluid"
-                />
-            </a>
-          </div>
-          
-          <div class="col-12 col-md-6 col-lg-3">
-            <a 
-              href="assets/gallery4.jpeg" 
-              class="gallery-img rounded-4 overflow-hidden shadow-sm mb-3"
-              data-lg-size="1200-800"
-              >               
-              <img 
-                src="assets/gallery4.jpeg" 
-                alt="Live music performance at Tipsy Bean" 
-                class="img-fluid"
-                />
-            </a>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-5 fw-bold mb-4">Reserve Your Spot</h2>
+            <p class="lead mb-5">Secure your place in just 30 seconds</p>
+            <div class="booking-form card shadow-lg border-0 p-5 mx-auto" style="max-width: 600px;">
+              <form id="bookingForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label fw-bold">Event</label>
+                    <select class="form-select" required>
+                      <option value="">Choose Event</option>
+                      <option>Barista Skills Workshop</option>
+                      <option>Community Coffee Meetup</option>
+                      <option>Coffee Tasting Extravaganza</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-bold">Date & Time</label>
+                    <input type="datetime-local" class="form-control" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label fw-bold">Name</label>
+                    <input type="text" class="form-control" placeholder="Your full name" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label fw-bold">Email</label>
+                    <input type="email" class="form-control" placeholder="your@email.com" required>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
+                      Book Now <i class="fas fa-calendar-check ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    
+
+    <!-- Gallery -->
+     <section class="event-gallery py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Gallery</h2>
+          <p class="lead">Relive the moments</p>
+        </div>
+        <div id="lightGallery" class="row g-3 justify-content-center">
+          <div class="col-md-6 col-lg-3"><a href="assets/gallery1.jpeg" class="gallery-item"><img src="assets/gallery1.jpeg" class="img-fluid rounded-4 shadow" alt="Event 1"></a></div>
+          <div class="col-md-6 col-lg-3"><a href="assets/gallery2.jpeg" class="gallery-item"><img src="assets/gallery2.jpeg" class="img-fluid rounded-4 shadow" alt="Event 2"></a></div>
+          <div class="col-md-6 col-lg-3"><a href="assets/gallery3.jpeg" class="gallery-item"><img src="assets/gallery3.jpeg" class="img-fluid rounded-4 shadow" alt="Event 3"></a></div>
+          <div class="col-md-6 col-lg-3"><a href="assets/gallery4.jpeg" class="gallery-item"><img src="assets/gallery4.jpeg" class="img-fluid rounded-4 shadow" alt="Event 4"></a></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer 
-      class="site-footer py-3 bg-body-tertiary text-center text-muted small"
-      >
-      <div class="footer-content">© 2025 Tipsy Bean. All Rights Reserved.</div>
+     <footer class="site-footer py-5 bg-dark text-white text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 EJR's Coffee. All Rights Reserved.</p>
+      </div>
     </footer>
-    
-    <!-- Bootstrap JS bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-      ></script>
-    
-    <!-- Lightgallery core + zoom plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+
+    <!-- Scripts -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
+     <script src="script.js"></script>
   </body>
 </html>

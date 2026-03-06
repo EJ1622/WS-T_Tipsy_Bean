@@ -1,177 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Events | Barista Skills Workshop</title>
-        
-        <!-- Responsive viewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        <!-- Google Fonts: Montserrat -->
-        <link 
-            rel="preconnect" href="https://fonts.googleapis.com">
-        <link 
-            rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link 
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
-            rel="stylesheet"
-            />
-        
-        <!-- Bootstrap CSS -->
-        <link 
-            rel="stylesheet" 
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-            />
-        
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Fonts + Bootstrap + CSS -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+         <link rel="stylesheet" href="style.css">
     </head>
-    
     <body>
-        <!-- Site navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
+        <!-- Navbar with Events active -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
             <div class="container-fluid">
-                <!-- Brand links to home -->
-                <a class="navbar-brand fw-semibold" href="index.html">Tipsy Bean</a>
-                
-                <!-- Mobile menu toggler -->
-                <button 
-                    class="navbar-toggler" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation"
-                    >
-                    <span class="navbar-toggler-icon">
-                        <span></span>
-                    </span>
+                <a class="navbar-brand fw-semibold" href="index.html">EJR's Coffee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <!-- Navigation links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto nav-links">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a href="events.html" class="nav-link active" aria-current="page">
-                                Events
-                            </a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacts.html">Contact Us</a>
-                        </li>                  
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
-        <!-- Event hero header -->
-        <header 
-            class="event-hero d-flex align-items-center justify-content-center text-light" 
-            style="background-image: url('assets/tasting_workshop.jpeg');"
-            >
+
+        <!-- Event Hero -->
+         <header class="event-hero" style="background-image: url('assets/tasting_workshop.png');">
             <div class="event-hero-overlay"></div>
-            
-            <div class="event-hero-content position-relative text-center">
-                <p class="event-hero-kicker mb-1 text-uppercase small">
-                    Hands-on Workshop
-                </p>
-                <h1 class="mb-0">Barista Skills Workshop</h1>
-                <p class="event-hero-sub mt-2 mb-0">
-                    Learn professional brewing, frothing, and latte art techniques.
-                </p>
+            <div class="container">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center text-white">
+                        <p class="event-badge badge bg-warning text-dark fs-5 px-4 py-2 mb-3">Special Event</p>
+                        <h1 class="display-3 fw-bold mb-3">Barista Skills Workshop</h1>
+                        <p class="lead fs-3">Learn professional brewing, frothing, and latte art techniques.</p>
+                        <div class="mt-4">
+                            <a href="events.html" class="btn btn-warning btn-lg px-5 me-3">← Back to Events</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
-        
-        <!-- Main event content -->
-        <main>
-            <section 
-                class="event-main bg-white rounded shadow-sm my-4 px-3 py-4 mx-auto" 
-                style="max-width: 750px;"
-                >
-                <!-- Event metadata -->
-                <div class="event-meta border-bottom pb-2 small text-muted mb-3">
-                    November 11, 2025 &bullet; Upcoming Events
-                </div>
-                
-                <!-- Event description -->
-                <article class="event-full mb-4">
-                    <p>
-                        Master the art of coffee making in this hands-on workshop designed for enthusiasts of all levels. Learn essential techniques for brewing, frothing milk, and serving like a professional barista.
-                    </p>
-                    <p>
-                        From perfecting espresso shots to creating stunning latte art, you'll gain practical skills you can use at home. Our experienced baristas will guide you through each step with personalized attention.
-                    </p>
-                    <p>
-                        Take home new confidence in your coffee-making abilities and impress friends and family with your barista skills!
-                    </p>            
-                </article>
-                
-                <!-- Event navigation -->
-                <nav class="event-nav-row d-flex flex-column flex-md-row justify-content-between border-top pt-3 mt-3 gap-3"
-                    aria-label="Event navigation"
-                    >
-                    <div class="event-nav-prev text-start">
-                        <span class="d-block small text-muted">&lt; Previous</span>
-                        <a 
-                            href="event_extravaganza.html" 
-                            class="text-decoration-underline fw-medium"
-                            >
-                            Coffee Tasting Extravaganza
-                        </a>
+
+        <!-- Event Details -->
+         <section class="event-details py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="event-content card shadow-lg border-0 p-5">
+                            <div class="event-meta mb-4 pb-3 border-bottom">
+                                <span class="badge bg-warning me-3 px-3 py-2">November 22, 2026</span>
+                                <span class="badge bg-secondary px-3 py-2">8:00 PM</span>
+                            </div>
+
+                            <div class="event-description lead lh-lg mb-5">
+                                <p>Master the art of coffee making in this hands-on workshop designed for enthusiasts of all levels. Learn essential techniques for brewing, frothing milk, and serving like a professional barista.</p>
+                                <p>From perfecting espresso shots to creating stunning latte art, you'll gain practical skills you can use at home. Our experienced baristas will guide you through each step with personalized attention.</p>
+                                <p>Take home new confidence in your coffee-making abilities and impress friends and family with your barista skills!</p>
+                            </div>
+
+                            <!-- Navigation -->
+                             <nav class="event-nav d-flex justify-content-between">
+                                <a href="event_extravaganza.html" class="btn btn-outline-warning">
+                                    <i class="fas fa-chevron-left me-2"></i>Previous
+                                </a>
+                                <a href="event_meetup.html" class="btn btn-outline-warning">
+                                    Next <i class="fas fa-chevron-right ms-2"></i>
+                                </a>
+                            </nav>
+                        </div>
                     </div>
-                    
-                    <div class="event-nav-next text-md-end text-start">
-                        <span class="d-block small text-muted">Next &gt;</span>
-                        <a 
-                            href="event_meetup.html" 
-                            class="text-decoration-underline fw-medium"
-                            >Community Coffee Meet-up
-                        </a>
-                    </div>
-                </nav>
-                
-                <!-- Return link -->
-                <div class="event-return mt-3">
-                    &lt; 
-                    <a href="events.html" class="text-decoration-underline">
-                        Back to Events
-                    </a>
                 </div>
-            </section>
-        </main>
-        
+            </div>
+        </section>
+
         <!-- Footer -->
-        <footer
-            class="site-footer py-3 bg-body-tertiary text-center text-muted small"
-            >
-            <div class="footer-content">
-                © 2025 Tipsy Bean. All Rights Reserved.
+         <footer class="site-footer py-5 bg-dark text-white text-center">
+            <div class="container">
+                <p class="mb-0">&copy; 2025 EJR's Coffee. All Rights Reserved.
             </div>
         </footer>
         
-        <!-- Bootstrap JS bundle -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"
-            ></script>
-
-        <!-- Custom JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
