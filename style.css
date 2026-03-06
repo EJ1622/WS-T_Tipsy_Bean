@@ -454,7 +454,7 @@ body {
 
 .events-hero {
     min-height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('assets/events-hero.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('assets/events_hero.png') center/cover no-repeat;
 }
 
 .event-hero {
